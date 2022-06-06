@@ -68,10 +68,22 @@ En proceso
 
 ## Equipo de Desarrollo
 
-- Ingrid Echeverri
-- Jean Pierre
-- Maria Camila
-- Jhan Alejandro
+<a href="https://github.com/camipony">
+  <img src="https://avatars.githubusercontent.com/u/66857434?v=4" width="50">
+</a>
+
+<a href="https://github.com/Jhan-ai-s13">
+  <img src="https://avatars.githubusercontent.com/u/62583427?v=4" width="50">
+</a>
+
+
+<a href="https://github.com/Ingrid-E">
+  <img src="https://avatars.githubusercontent.com/u/62229851?v=4" width="50">
+</a>
+
+
+
+
 
 ## Licencia
 ![image](https://user-images.githubusercontent.com/62229851/172071274-79d1b08d-1ee1-4c38-8751-9bafe262308a.png)
