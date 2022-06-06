@@ -41,7 +41,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 <p align="center">
-<img src="https://user-images.githubusercontent.com/62229851/172070247-606aedd8-9861-4207-b42a-7744d379acb2.png" width="50%">
+<img src="https://user-images.githubusercontent.com/62229851/172070247-606aedd8-9861-4207-b42a-7744d379acb2.png">
 </p>
  
 Dacris es una tienda virtual que vende y muestra sus productos por medio de las redes sociales, este proyecto es una aplicacion web donde se va a mostrar informacion importante de la tienda como sus productos teniendo un catalogo virtual donde se pueda agregar,editar,modificar,eliminar productos mantiene el catalogo actualizado.
