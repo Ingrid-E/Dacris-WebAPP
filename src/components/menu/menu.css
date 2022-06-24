@@ -1,0 +1,38 @@
+.dacris__menu {
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.dacris__menu-content {
+    display: flex;
+    column-gap: 100px;
+    justify-content: center;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.dacris__menu-content_list {
+    display: flex;
+    flex-flow: column;
+    row-gap: 18px;
+}
+
+.dacris__menu-content_list-item {
+    text-transform: capitalize;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    transition: .3s all;
+    display: flex;
+    align-items: center;
+}
+
+.dacris__menu-content_list-item:hover {
+    color: var(--color-text-hover);
+}
+
+.dacris__menu-content_line {
+    height: auto;
+    outline: 2px solid #90D8FF;
+}
