@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Home, AboutUs, Login} from "./Pages/index"
 
+
 function App() {
   return (
     <div className="App">
