@@ -1,8 +1,8 @@
 
 import React from "react";
-import "../Components/components.css"
-import left from "../Assets/left.png"
-import right from "../Assets/right.png"
+import "../components/components.css"
+import left from "../assets/left.png"
+import right from "../assets/right.png"
 
 
 function ButtonsNext() {

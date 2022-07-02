@@ -1,11 +1,11 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Link } from "react-router-dom";
-import logo from '../Assets/logoE.png'
-import daviplata from '../Assets/daviplata.png'
-import bancolombia from '../Assets/bancolombia.png'
-import mercado from '../Assets/mercadopago.png'
-import insta from '../Assets/insta.png'
+import logo from '../assets/logoE.png'
+import daviplata from '../assets/daviplata.png'
+import bancolombia from '../assets/bancolombia.png'
+import mercado from '../assets/mercadopago.png'
+import insta from '../assets/insta.png'
 
 function Footer() {
   return (
