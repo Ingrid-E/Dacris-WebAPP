@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Home, AboutUs, Login} from "./Pages/index"
-import { Navbar, SocialMedia } from './components';
+import { Navbar, SocialMedia, DotButton } from './components';
 import './app.css'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
         </Routes>
       </Router>*/}
-      <Navbar />
+      <DotButton />
       </div>
 
   );
