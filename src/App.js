@@ -4,6 +4,7 @@ import {Home, AboutUs, Login} from "./Pages/index"
 import { Navbar, SocialMedia, DotButton } from './components';
 import './app.css'
 
+
 function App() {
   return (
     <div className="App">
