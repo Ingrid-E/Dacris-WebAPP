@@ -1,0 +1,19 @@
+.dacris__social-media {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 1000;
+}
+
+.dacris__social-media-list-item {
+    padding: 10px 0px;
+}
+
+.dacris__social-media-list-item a img {
+    height: 50px;
+    transition: .3s all;
+}
+
+.dacris__social-media-list-item a img:hover {
+    transform: scale(1.2);
+}

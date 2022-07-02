@@ -1,0 +1,100 @@
+.polka-dot {
+  width: 240px;
+  height: 240px;
+  background-color: #000;
+  background-image: radial-gradient(#fff 10%, transparent 11%),
+  radial-gradient(#fff 10%, transparent 11%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  background-repeat: repeat;
+}
+
+
+
+
+.container-right{
+ position: absolute;
+ top: 300px; 
+ right: 50px;
+}
+
+.container-left{
+  position: absolute;
+  top: 300px;
+  left: 50px;
+ }
+
+.dot {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  text-decoration: none;
+  padding: 20px;
+  box-shadow:2px 2px 5px gray;
+}
+
+.triangleRight {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  text-align: left;
+  top: 6px;
+  right: 1px;
+
+}
+.triangleRight:before,
+.triangleRight:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+.triangleRight,
+.triangleRight:before,
+.triangleRight:after {
+  width:  17px;
+  height: 17px;
+  border-top-right-radius: 30%;
+}
+
+.triangleRight {
+  transform: rotate(-209deg) skewX(-30deg) scale(1,.966);
+}
+.triangleRight:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangleRight:after {
+  transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+
+.triangleLeft {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  text-align: left;
+  bottom: 40px;
+  left: 20px;
+
+}
+.triangleLeft:before,
+.triangleLeft:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+.triangleLeft,
+.triangleLeft:before,
+.triangleLeft:after {
+  width:  17px;
+  height: 17px;
+  border-top-right-radius: 30%;
+}
+
+.triangleLeft {
+  transform: rotate(-210deg) skewX(-30deg) scale(1,.966);
+}
+.triangleLeft:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangleLeft:after {
+  transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
