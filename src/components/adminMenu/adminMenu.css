@@ -1,0 +1,72 @@
+
+
+.admin_menu *  {
+    text-shadow: none;
+    color: black;
+}
+
+.admin_menu .title {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: none;
+}
+
+.admin_menu .menu {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background-color: #90D8FF;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin_menu .menu .menu_top_options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.admin_menu .menu_navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.admin_menu .menu_option {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.admin_menu .menu_open * {
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: transform 400ms ease-in-out;
+}
+
+.admin_menu .menu_close *{
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: transform 400ms ease-in-out;
+}
+
+.admin_menu .menu_option:hover *{
+    color: white!important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 2.05rem;
+}
+
+.admin_menu .menu_option svg {
+    font-size: 2rem;
+    transition: font-size 400ms ease-in-out;
+}
+.admin_menu .menu_option h1 {
+    font-size: 2rem;
+    font-family: 'League Gothic', sans-serif;
+    transition: font-size 400ms ease-in-out;
+}
