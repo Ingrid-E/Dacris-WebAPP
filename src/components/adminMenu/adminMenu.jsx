@@ -7,9 +7,9 @@ const AdminMenu = () => {
     const [menuState, setMenuState] = useState(true)
     return (
         <div className="admin_menu">
-            <nav className='menu'>
+            <nav className={menuState? 'menu menu_open': 'menu menu_close'}>
                 <div className='menu_top_options'>
-                <div onClick={() => setMenuState(!menuState)} className={menuState? 'menu_option menu_open': 'menu_option menu_close'}>
+                <div onClick={() => setMenuState(!menuState)} className={menuState? 'menu_option button_open': 'menu_option button_close'}>
                     <ChevronDoubleLeft role="close or open"/>
                 </div>
                 <div className='menu_navigation'>

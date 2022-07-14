@@ -17,17 +17,28 @@
     top: 0px;
     bottom: 0px;
     background-color: #90D8FF;
-    width: fit-content;
+    width: 200px;
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     justify-content: space-between;
+    transition: width 600ms ease-in-out;
+}
+
+.admin_menu .menu_close {
+    width: 75px;
+    transition: width 600ms ease-in-out;
+}
+
+.menu_exit_option {
+    width:fit-content;
 }
 
 .admin_menu .menu .menu_top_options {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 50px;
 }
 
@@ -43,13 +54,13 @@
     gap: 20px;
 }
 
-.admin_menu .menu_open * {
+.admin_menu .button_open * {
     transform-origin: center;
     transform: rotate(0deg);
     transition: transform 400ms ease-in-out;
 }
 
-.admin_menu .menu_close *{
+.admin_menu .button_close *{
     transform-origin: center;
     transform: rotate(90deg);
     transition: transform 400ms ease-in-out;
@@ -69,4 +80,37 @@
     font-size: 2rem;
     font-family: 'League Gothic', sans-serif;
     transition: font-size 400ms ease-in-out;
+}
+
+@media screen and (min-width: 1280px) {
+    .admin_menu .menu_option svg {
+        font-size: 1.8rem;
+    }
+    .admin_menu .menu_option h1 {
+        font-size: 1.8rem;
+    }
+    .admin_menu .menu {
+        width: 180px;
+    }
+    .admin_menu .menu_close {
+        width: 73px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .admin_menu .menu_option svg {
+        font-size: 2rem;
+    }
+    .admin_menu .menu_option h1 {
+        font-size: 2rem;
+    }
+    .admin_menu .menu {
+        width: 200px;
+    }
+    .admin_menu .menu_close {
+        width: 75px;
+    }
+    .admin_menu .menu_navigation {
+        gap: 1.5rem;
+    }
 }
