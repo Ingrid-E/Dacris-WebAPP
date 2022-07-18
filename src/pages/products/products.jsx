@@ -1,10 +1,10 @@
 import React from "react";
-import { AdminMenu } from "../../components/index";
-
+import { AdminMenu, AdminLogin, AdminTable} from "../../components/index";
+import './products.css'
 function Products(){
     return(
         <div className="products">
-            <AdminMenu></AdminMenu>
+            <AdminTable/>
         </div>
     )
 }

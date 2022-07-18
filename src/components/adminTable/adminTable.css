@@ -1,0 +1,46 @@
+.admin_table tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 0.5rem 0.7rem;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+}
+
+.admin_table table{
+ display: flex;
+ flex-direction: column;
+ gap: 3px;
+}
+
+.admin_table .admin_table_header {
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin_table_row .table_icon {
+    width: 20px;
+}
+
+.admin_table_row .table_longText {
+    width: 150px;
+}
+
+
+.admin_table_row .table_shortText {
+    width: 55px;
+}
+
+.admin_table_row .table_img {
+    width: 6rem;
+}
+
+.admin_table_row .table_img img{
+    width: 6rem;
+    height:10rem;
+    background-color: lightgray;
+}
