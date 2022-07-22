@@ -7,7 +7,7 @@ const AdminTableRow = (props) => {
     const {image, category, size, name, description, price, disponibility, onStore, index} = props;
     return (
             <tr className="admin_table_row" style={checked? {backgroundColor: "#CEEEFF"}: index%2 === 0? {backgroundColor: "white"}: {backgroundColor: "#F2F2F2"}}>
-                <td className='table_icon' onClick={()=> {setChecked(!checked)}}><AdminCheckButton /></td>
+                <td className='table_row_icon' onClick={()=> {setChecked(!checked)}}><AdminCheckButton /></td>
                 <td>{image !== undefined? (<div className='table_img'><img src={image} alt={name + " " + category}></img></div>): <div className='table_img'><img src="#" alt="Not loaded"></img></div>}</td>
                 <td className='table_longText'>{category !== undefined? category: 'Categoria'}</td>
                 <td className='table_shortText'>{size !== undefined? size: 'Tamaño'}</td>
