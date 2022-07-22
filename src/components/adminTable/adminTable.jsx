@@ -2,26 +2,22 @@ import React, {useEffect, useState} from 'react'
 import './adminTable.css'
 import AdminTableRow from './adminTableRows'
 import { getProducts} from '../../api/index'
-
 const AdminTable = () => {
     //Fetch Data
     const [products, setProducts] = useState([])
-    const [categories, setCategories] = useState([])
-
 
     useEffect(()=>{
         async function call(){
             setProducts(await getProducts())
         }
         call();
-
-
-
     }, [])
-
 
     return (
         <div className="admin_table">
+            <h1>Product Table</h1>
+
+            <br></br>
             <table>
                 <thead>
                 <tr className='admin_table_row admin_table_header'>
@@ -48,6 +44,9 @@ const AdminTable = () => {
                         disponibility = {product.available}
                         onStore = {product.in_store}
                         key = {product.pk_product}
+                        size = {product.size}
+                        image = {product.images[0].url}
+                        index = {i}
                         />
 
                     ))
