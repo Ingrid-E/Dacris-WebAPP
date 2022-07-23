@@ -1,16 +1,23 @@
 .round_textfield input{
     background-color: white;
-    width: 18rem;
-    height: 30px;
-    padding: 1rem 1rem;
+    outline: none;
+    width: 300px;
+    height: 35px;
     border: none;
-    border-radius: 2rem;
+    padding-left: 40px;
+    border-radius: 20px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    font-family: 'Montserrat', bold;
+}
+
+.round_textfield input:focus {
+    box-shadow: 0px 0px 6px rgba(6, 65, 153, 0.418);
 }
 
 .round_textfield svg{
     position: relative;
-    top: 0px;
-    left: 2rem;
-    font-size: 30px;
+    top: -4px;
+    left: 35px;
+    font-size: 25px;
 }

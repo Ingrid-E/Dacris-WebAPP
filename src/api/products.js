@@ -1,9 +1,29 @@
 import api from './posts'
 import { getCategories } from './categories'
 import { getImages } from './images'
-const getProducts = async () => {
+var qs = require('qs');
+
+const getProducts = async (filter = '') => {
     try {
-        const response = await api.get('/product')
+        let response
+        const headers = { 
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        if(filter !== ''){
+            console.log("Filter is not empty")
+
+            const data  = {
+                filter: "Mini"
+            }
+
+
+
+
+            response = await api.get('/product', data, headers)
+            console.log("Response API: ", response)
+        
+        }
+
         if (response && response.data) {
             const products = response.data;
             const categories = await getCategories()

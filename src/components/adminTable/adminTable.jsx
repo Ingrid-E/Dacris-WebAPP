@@ -9,13 +9,13 @@ const AdminTable = () => {
     //Fetch Data
     const [products, setProducts] = useState([])
     const [interval, setInterval] = useState({start: 0, quantity: 5, page:1})
-
     useEffect(()=>{
-        async function call(){
-            setProducts(await getProducts())
-        }
         call();
     }, [])
+
+    const call = async() =>{
+        setProducts(await getProducts("mini"))
+    }
 
     const nextPage = ()=>{
         if(products.length)
@@ -26,10 +26,23 @@ const AdminTable = () => {
         setInterval({start: interval.start - interval.quantity, quantity: interval.quantity, page: interval.page-1})
     }
 
+    const handleKeyPress = async (e) =>{
+        if(e.key === "Enter"){
+            await call();
+            if(e.target.value !== ''){
+                console.log(e.target.value)
+                const filteredProducts = products.filter(product => product.name.includes(e.target.value))
+                setProducts(filteredProducts)
+            }
+        }
+    }
+
     return (
         <div className="admin_table">
             <h1>Product Table</h1>
-            <RoundTextField/>
+            <RoundTextField
+            action = {(e) => handleKeyPress(e)}
+            />
             <br></br>
             <table>
                 <thead>
