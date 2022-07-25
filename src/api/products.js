@@ -34,7 +34,7 @@ const getProducts = async (page, limit, filter = '') => {
 
                 product.images = product_images
             });
-
+            console.log(length)
             return {products: products, length: length}
         }
 
@@ -45,21 +45,21 @@ const getProducts = async (page, limit, filter = '') => {
 
 const deleteProducts = async(products) => {
         products.forEach(async id_product  => {
-            console.log(id_product)
             try{
-                const response = await fetch(baseURL+`product/${id_product}`, {
+                await fetch(baseURL+`product/${id_product}`, {
                     method: "DELETE",
                     redirect: 'follow'
                 })
-                const json = await response.json()
-                console.log(json)
-                return json
+
+                return true
             }catch(err){
                 console.error(err)
                 return false
             }
 
         })
+
+        return true
 
 }
 

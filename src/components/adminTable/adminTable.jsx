@@ -13,6 +13,7 @@ const AdminTable = () => {
     const [pagination, setPagination] = useState({page: 1, limit: 5, length: 0, filter: ''})
     const [checkedProducts, setCheckedProducts] = useState([])
     const [popout, setPopOut] = useState({state:'close'})
+
     useEffect(() => {
         call();
         //eslint-disable-next-line
@@ -66,10 +67,12 @@ const AdminTable = () => {
     }
 
     const handleDelete = async () => {
-        setPopOut({state:'close'})
-        console.log(products)
         await deleteProducts(checkedProducts)
-        call();
+        console.log("Deleting Product")
+        setPopOut({state: 'closed'})
+        call()
+        call()
+
     }
     
 
@@ -121,7 +124,7 @@ const AdminTable = () => {
                                 key={product.pk_product}
                                 id={product.pk_product}
                                 size={product.size}
-                                image={product.images[0].url !== undefined? product.images[0].url: '#'}
+                                image={product.images.length > 0? product.images[0].url:'#'}
                                 index={i}
                                 checkedProducts = {checkedProducts}
                                 onClick={handleCheckedProducts}
@@ -135,7 +138,7 @@ const AdminTable = () => {
             <div className='table_button'>
                 <button onClick={() => { prevPage() }} style={pagination.page === 1 ? { visibility: "hidden" } : { visibility: "visible" }}><CaretLeftFill /></button>
                 <p>{pagination.page}</p>
-                <button onClick={() => { nextPage()}} style={(pagination.page * pagination.length) > pagination.length ? { visibility: "hidden" } : { visibility: "visible" }} ><CaretRightFill /></button>
+                <button onClick={() => { nextPage()}} style={(pagination.page * pagination.limit) >= pagination.length ? { visibility: "hidden" } : { visibility: "visible" }} ><CaretRightFill /></button>
             </div>
         </div>
     )
