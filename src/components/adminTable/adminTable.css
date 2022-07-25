@@ -17,6 +17,24 @@
  gap: 3px;
 }
 
+.admin_table .admin_table_options {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin_table .admin_table_options .table_options_icons {
+    font-size: 30px;
+    color: black;
+}
+
+.admin_table .admin_table_options .table_options_icons:hover {
+    color: #115E83;
+}
+
 .admin_table .admin_table_header {
     background: #FFFFFF;
     padding: 0.2rem 0.7rem;
@@ -97,3 +115,5 @@
 .admin_table .table_button svg {
     font-size: 30px;
 }
+
+

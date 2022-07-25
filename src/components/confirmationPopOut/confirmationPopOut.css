@@ -1,0 +1,64 @@
+.confirmation_popout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid #CED4DA;
+}
+
+.confirmation_popout * {
+    margin: 5px 10px;
+}
+
+.confirmation_popout h1{
+    font-family: 'League Gothic';
+    text-shadow: none;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+}
+
+.confirmation_popout p{
+    font-family: 'Montserrat' ;
+    text-align: left;
+    text-shadow: none;
+    font-size: 20px;
+    align-self: flex-start;
+    width: 80%;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.confirmation_popout .popout_buttons{
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.confirmation_popout .popout_buttons button {
+    color: white;
+    outline: none;
+    border: none;
+    padding: 6px 12px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    border-radius: 5px;
+} 
+
+
+.confirmation_popout .popout_buttons button:first-child:hover {
+    background-color: #42474b!important;
+} 
+
+.confirmation_popout .popout_buttons button:last-child:hover {
+    background-color: #004fa3!important;
+} 
+
+

@@ -1,31 +1,19 @@
-import api from './posts'
 import { getCategories } from './categories'
 import { getImages } from './images'
-var qs = require('qs');
+const baseURL = 'https://dacris-backend.herokuapp.com/'
 
-const getProducts = async (filter = '') => {
+
+const getProducts = async (page, limit, filter = '') => {
     try {
-        let response
-        const headers = { 
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-        if(filter !== ''){
-            console.log("Filter is not empty")
+        const response = await fetch(baseURL+`product/pagination?page=${page}&limit=${limit}&filter=${filter}`, {
+            method: "GET",
+            redirect: 'follow'
+        })
+        const json = await response.json()
+        const products = json.products
+        const length = json.length
 
-            const data  = {
-                filter: "Mini"
-            }
-
-
-
-
-            response = await api.get('/product', data, headers)
-            console.log("Response API: ", response)
-        
-        }
-
-        if (response && response.data) {
-            const products = response.data;
+        if (products !== undefined && products !== []) {
             const categories = await getCategories()
             const images = await getImages()
             products.forEach(product => {
@@ -47,12 +35,32 @@ const getProducts = async (filter = '') => {
                 product.images = product_images
             });
 
-            console.log(products)
-            return products
+            return {products: products, length: length}
         }
+
     } catch (err) {
-        console.error(err)
+        console.error("ERROR: ", err)
     }
 }
 
-export { getProducts }
+const deleteProducts = async(products) => {
+        products.forEach(async id_product  => {
+            console.log(id_product)
+            try{
+                const response = await fetch(baseURL+`product/${id_product}`, {
+                    method: "DELETE",
+                    redirect: 'follow'
+                })
+                const json = await response.json()
+                console.log(json)
+                return json
+            }catch(err){
+                console.error(err)
+                return false
+            }
+
+        })
+
+}
+
+export { getProducts, deleteProducts}

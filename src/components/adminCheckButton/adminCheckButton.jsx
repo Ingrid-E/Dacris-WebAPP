@@ -1,13 +1,14 @@
-import React, {useState}from 'react'
+import React from 'react'
 import './adminCheckButton.css'
 
 
-const AdminCheckButton = () => {
-    const [checked, setChecked] = useState(false)
+const AdminCheckButton = (props) => {
+    const {checkedButton} = props
+
     return (
         <div className="admin_checkButton" 
-        onClick={()=>{setChecked(!checked)}} 
-        style={checked? {backgroundColor: "#115E83"}:
+        onClick={()=>!checkedButton} 
+        style={checkedButton? {backgroundColor: "#115E83"}:
                         {backgroundColor: "white"}}>
             
         </div>
