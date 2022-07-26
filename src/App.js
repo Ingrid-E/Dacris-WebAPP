@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Home, Login} from "./pages/index"
 import { navbar, socialMedia} from './components';
 import ButtonsNext from "./components/buttonNext/ButtonsNext";
-import Button from "./components/button/Button";
 import AboutUs from "./pages/aboutus/about-us";
 import './app.css'
 
