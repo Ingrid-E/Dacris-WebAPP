@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './adminTable.css'
 import AdminTableRow from './adminTableRows'
 import { getProducts, deleteProducts} from '../../api/index'
-import { CaretLeftFill, CaretRightFill, TrashFill} from 'react-bootstrap-icons'
-import RoundTextField from '../roundTextField/roundTextField'
+import { CaretLeftFill, CaretRightFill, TrashFill, PlusLg, PencilFill} from 'react-bootstrap-icons'
+import RoundTextField from '../TextFields/roundTextField'
 import ConfirmationPopOut from '../confirmationPopOut/confirmationPopOut'
-
+import AdminProductAdd from '../adminProductAdd/adminProductAdd'
 
 const AdminTable = () => {
     //Fetch Data
@@ -59,41 +59,69 @@ const AdminTable = () => {
         console.log(checkedProducts)
     }
 
-    const openPopOut = ()=>{
-        console.log("Deleting")
-        setCheckedProducts(checkedProducts)
-        setPopOut({state:'open', title: 'Eliminar', description: 'Estas seguro que quieres eliminar este producto?', confirmation: 'Continuar', action: handleDelete})
-        console.log(popout)
+    const openPopOut = async (name = '')=>{
+        if(name === 'Delete'){
+            setCheckedProducts(checkedProducts)
+            await setPopOut({state:'open', title: 'Eliminar', description: 'Estas seguro que quieres eliminar este producto?', confirmation: 'Continuar', action: handleDelete})
+        }
+        if(name === 'Add'){
+            setCheckedProducts(checkedProducts)
+            await setPopOut({state:'open', title: 'Agregar'})
+        }
+        renderPopOut()
+        return true
     }
 
-    const handleDelete = async () => {
-        await deleteProducts(checkedProducts)
-        console.log("Deleting Product")
-        setPopOut({state: 'closed'})
-        call()
-        call()
 
-    }
-    
-
-    return (
-        <div className="admin_table">
+    const renderPopOut = () => {
+        if(popout.title === 'Eliminar'){
+            return (
             <ConfirmationPopOut
             state={popout.state}
             title={popout.title}
             description={popout.description}
             confirmation={popout.confirmation}
             clickAction = {popout.action}/>
+            )
+        }
+        if(popout.title === 'Agregar'){
+            return (
+            <AdminProductAdd/>
+            )
+        }
+        return <div></div>
+        
 
+    }
+
+    const handleDelete = async () => {
+        await deleteProducts(checkedProducts)
+        await call()
+        await call()
+        setPopOut({state: 'closed'})
+        setCheckedProducts([])
+    }
+    
+
+    return (
+        
+        <div className="admin_table">
+            {renderPopOut()}
 
             <h1>Product Table</h1>
             <div className='admin_table_options'>
                 <RoundTextField
                     action={(e) => handleKeyPress(e)}
                 />
+                <PlusLg
+                className='table_options_icons'
+                onClick={()=>openPopOut("Add")}/>
                 <TrashFill 
                 className='table_options_icons'
-                onClick={()=>openPopOut()}/>
+                onClick={()=>openPopOut("Delete")}/>
+                <PencilFill
+                className='table_options_icons'/>
+
             </div>
             <br></br>
             <table>
