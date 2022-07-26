@@ -1,5 +1,5 @@
-import AboutUs from "./AboutUs/about-us"
-import Home from "./Home/home"
-import Login from "./Login/login"
+import AboutUs from "./aboutus/about-us"
+import Home from "./home/home"
+import Login from "./login/login"
 
 export {AboutUs, Home, Login}

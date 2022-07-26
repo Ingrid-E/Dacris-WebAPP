@@ -1,9 +1,9 @@
 import React from "react";
-import "../Home/home.css";
-import image from '../../Assets/image-home.jpeg';
-import NavBar from "../../Components/NavBar"
-import ButtonsNext from "../../Components/ButtonsNext"
-import Footer from "../../Components/Footer"
+import "./home.css";
+import image from '../../assets/image-home.jpeg';
+import NavBar from "../../components/NavBar"
+import ButtonsNext from "../../components/buttonNext/ButtonsNext"
+import Footer from "../../components/footer/Footer"
 import { Button } from 'react-bootstrap';
 import { Helmet } from 'react-helmet'
 function Home() {

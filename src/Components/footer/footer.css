@@ -1,0 +1,24 @@
+
+
+
+
+.footerR {
+    background-color: #ffffff;
+    position: relative;
+    top: 350px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.footerR .row{
+    text-align: center;
+    align-items: center;
+}
+
+.footerR a, li, ul{
+    text-decoration: none;
+    list-style-type: none;
+
+}

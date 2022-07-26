@@ -1,0 +1,215 @@
+.aboutus * {
+        text-shadow: none;
+        color: black;
+}
+
+
+.aboutus .title {
+        position: relative;
+        margin-top: 2em;
+        text-align: center;
+        font-family: 'Playlist Script';
+        font-size: 50px;
+        text-shadow: none;
+}
+
+.aboutus .image1 {
+        position: relative;
+        top: 70px;
+        left: 49%;
+        width: 45%;
+}
+
+.aboutus .image2 {
+        position: absolute;
+        top: 70px;
+        left: 51%;
+        width: 45%;
+}
+
+.aboutus .image3 {
+        position: relative;
+        top: 120px;
+        left: 2%;
+        width: 45%;
+
+}
+
+.aboutus .image4 {
+        position: absolute;
+        top: 20%;
+        right: 55%;
+        width: 45%;
+}
+
+.aboutus .image5 {
+        position: relative;
+        bottom: 385px;
+        left: 53%;
+        width: 45%;
+}
+
+.aboutus .image6 {
+        position: absolute;
+        top: 70px;
+        left: 55%;
+        width: 45%;
+}
+
+.aboutus .sub-title {
+        font-family: 'League Gothic', sans-serif;
+        font-size: 40px;
+        text-shadow: none;
+        color: black;
+}
+
+.aboutus .frame1 {
+        position: relative;
+        margin-left: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+}
+
+.aboutus .frame2 {
+        position: relative;
+        margin-left: 30px;
+        align-items: center;
+        justify-content: center;
+}
+
+.aboutus .contactanos {
+        position: relative;
+        text-align: left;
+        left: 30px;
+        top: 550px;
+        block-size: 20px;
+
+
+}
+
+.aboutus .redes {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 40px;
+
+}
+
+
+
+.aboutus .p3 {
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 22px;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+}
+
+.aboutus .p3-bold {
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 22px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+
+
+}
+
+.aboutus .top {
+        height: 230vh;
+        background-color: rgb(255, 255, 255);
+        top: 10px;
+        box-shadow: 2px 2px 5px gray;
+}
+
+
+.aboutus .bloque-text {
+        position: relative;
+        text-align: left;
+        right: 45px;
+        top: 50px;
+        block-size: 20px;
+}
+
+.aboutus .bloque-text-right {
+        position: relative;
+        text-align: right;
+        bottom: 170px;
+}
+
+.aboutus .bloque-text2 {
+        position: relative;
+        text-align: left;
+        right: 45px;
+        top: 50px;
+        block-size: 20px;
+}
+
+.aboutus p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-right: 55%;
+}
+
+.aboutus .p2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 55%;
+}
+
+.aboutus .cite {
+        font-family: Georgia, Times, Times New Roman, serif;
+        font-style: italic;
+        color: #6F6F6F;
+        font-size: 20px;
+        margin-right: 55%;
+}
+
+
+/* If you want the content centered horizontally and vertically */
+.aboutus .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+}
+
+.square-box {
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        margin-top: -100px;
+}
+
+.square-box:before {
+        content: "";
+        display: block;
+        padding-top: 40%;
+}
+
+/* Split the screen in half */
+.split {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 50px;
+        background-color: white;
+}
+
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+}
+

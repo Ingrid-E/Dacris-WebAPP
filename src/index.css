@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+:root {
+    --font-family1: 'League Gothic', sans-serif;
+    --font-family-title: 'playlist script', sans-serif;
+    --font-family-text: 'Montserrat, sans-serif';
+
+    --color-bg: #D6ECFA;
+    --color-text-hover: #0E94D4;
+    --color-text-shadow: #D6ECFA;
+    --color-background-button: #0E94D4;
+}

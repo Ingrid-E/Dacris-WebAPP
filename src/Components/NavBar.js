@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import logo from '../Assets/logoE.png'
+import logo from '../assets/logoE.png'
 import { Search } from 'react-bootstrap-icons';
 
 function NavBar() {
