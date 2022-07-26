@@ -1,0 +1,39 @@
+.product_add_images {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.product_add_images .images_placeholder {
+    box-sizing: border-box;
+    height: 400px;
+    width: 220px;
+    background: rgb(255, 255, 255);
+    border: 2px dashed darkgray;
+}
+
+.product_add_images .images_placeholder .placeholder_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product_add_images .images_placeholder svg {
+    font-size: 30px;
+}
+
+.product_add_images .images_placeholder .placeholder_content h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}

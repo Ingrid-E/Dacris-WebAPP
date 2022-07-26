@@ -1,8 +1,8 @@
 import React from 'react'
-import './adminCheckButton.css'
+import './buttons.css'
 
 
-const AdminCheckButton = (props) => {
+const CheckButton = (props) => {
     const {checkedButton} = props
 
     return (
@@ -15,4 +15,4 @@ const AdminCheckButton = (props) => {
     )
 }
 
-export default AdminCheckButton
+export default CheckButton

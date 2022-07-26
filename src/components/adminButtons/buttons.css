@@ -1,0 +1,54 @@
+.admin_checkButton{
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #DCDCDC;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.479);
+    transition: background-color 200ms ease-in-out;
+}
+
+.admin_button button {
+    background: #0E94D5;
+    border-radius: 10px;
+    padding: 0 1rem;
+    color: white;
+    font-family: 'League Gothic';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-size: 25px;
+    outline: none;
+    border: none;
+}
+
+.admin_button button:hover {
+    background: #115E83;
+}
+
+.admin_button .button_cancel {
+    background: #6A6A6A;
+}
+
+.admin_button .button_cancel:hover {
+    background: #3b3b3b;
+}
+
+.admin_imageButton input  {
+    display: none;
+}
+
+.admin_imageButton label  {
+    background: #0E94D5;
+    border-radius: 10px;
+    padding: 0 1rem;
+    color: white;
+    font-family: 'League Gothic';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
