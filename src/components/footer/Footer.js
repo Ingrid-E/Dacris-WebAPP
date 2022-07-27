@@ -19,15 +19,15 @@ function Footer() {
             <div className="col-sm">
               <li className='font-weight-bold mb-2' a href="#" >ACERCA DE</li>
               <a href="nosotros"><li>Nosotros </li></a>
-              <a href="mision"> <li>Mision </li></a>
-              <a href="vision"><li>Vision </li></a>
+              <a href="mision"> <li>Misión </li></a>
+              <a href="vision"><li>Visión </li></a>
             </div>
             <div className="col-sm">
-              <li className='font-weight-bold mb-2'>INFORMACION</li>
+              <li className='font-weight-bold mb-2'>INFORMACIÓN</li>
               <a href="preguntas"><li>Preguntas frecuentes</li></a>
-              <a href="sitio"><li>Donde encontrarnos </li></a>
+              <a href="sitio"><li>¿Dónde encontrarnos? </li></a>
               <a href="contacto"><li>Contacto </li></a>
-              <a href="comprar"><li>Como comprar </li></a>
+              <a href="comprar"><li>¿Cómo comprar? </li></a>
             </div>
             <div className="col-sm">
               <li className='font-weight-bold mb-2'>MEDIOS DE PAGO</li>

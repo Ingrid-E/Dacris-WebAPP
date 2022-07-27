@@ -132,19 +132,7 @@
         font-size: 1rem;
         font-family: 'Montserrat', sans-serif;
 }
-.aboutus .fade-in-section {
-        opacity: 0;
-        transform: translateY(20vh);
-        visibility: hidden;
-        transition: opacity 1200ms ease-out, transform 600ms ease-out,
-          visibility 1200ms ease-out;
-        will-change: opacity, transform, visibility;
-      }
-.aboutus .fade-in-section.is-visible {
-        opacity: 1;
-        transform: none;
-        visibility: visible;
-}
+
 
 @media screen and (min-width: 1280px){
         .aboutus .container_info .info_image{
