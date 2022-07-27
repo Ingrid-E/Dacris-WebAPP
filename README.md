@@ -81,6 +81,10 @@ En proceso
   <img src="https://avatars.githubusercontent.com/u/62229851?v=4" width="50">
 </a>
 
+<a href="https://github.com/JeanPierreCarPe">
+  <img src="https://avatars.githubusercontent.com/u/80010120?v=4" width="50">
+</a>
+
 
 
 
