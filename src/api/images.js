@@ -11,4 +11,12 @@ const getImages = async () => {
     }
 }
 
+const uploadImage = async () => {
+    try {
+
+    }catch(err){
+        
+    }
+}
+
 export {getImages}
