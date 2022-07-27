@@ -1,20 +1,15 @@
-
-
-
-
 .footerR {
     background-color: #ffffff;
-    position: relative;
-    top: 350px;
     text-align: center;
     justify-content: center;
+    margin-top: 40px;
 }
-
-
 
 .footerR .row{
     text-align: center;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
 }
 
 .footerR a, li, ul{
