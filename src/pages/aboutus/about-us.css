@@ -78,17 +78,6 @@
         width: 500px;
 }
 
-
-.aboutus .container_info .info_image img{
-        width: 500px;
-        animation: fadeIn 5s;
-        -webkit-animation: fadeIn 5s;
-        -moz-animation: fadeIn 5s;
-        -o-animation: fadeIn 5s;
-        -ms-animation: fadeIn 5s;
-}
-
-
 .aboutus .aboutus_contactanos  {
         display: flex;
         flex-direction: column;
@@ -136,11 +125,11 @@
 
 @media screen and (min-width: 1280px){
         .aboutus .container_info .info_image{
-                width: 380px;
+                width: 450px;
         }
         
         .aboutus .container_info .info_image img{
-                width: 380px;
+                width: 450px;
         }
         .aboutus .container_info .info_text h1{
                 font-size: 40px;
@@ -165,11 +154,11 @@
                 font-size: 60px;
         }
         .aboutus .container_info .info_image{
-                width: 400px;
+                width: 500px;
         }
         
         .aboutus .container_info .info_image img{
-                width: 400px;
+                width: 500px;
         }
         .aboutus .container_info:nth-child(2){
                 flex-direction: row-reverse !important;

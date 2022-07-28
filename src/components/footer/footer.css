@@ -12,8 +12,7 @@
     align-content: flex-start;
 }
 
-.footerR a, li, ul{
+.footerR a, a span, li, ul{
     text-decoration: none;
     list-style-type: none;
-
 }

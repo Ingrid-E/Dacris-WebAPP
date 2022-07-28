@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import ReactDOM from 'react-dom';
 import '../aboutus/about-us.css'
-import photoA from "../../assets/1erafoto.png"
-import photoB from "../../assets/2dafoto.png"
+import photoA from "../../assets/photoA.png"
+import photoB from "../../assets/photoB.png"
 import photoC from "../../assets/photoC.png"
 import wp from "../../assets/wpSVG.svg"
 import insta from "../../assets/instaSVG.svg"
@@ -71,17 +70,17 @@ function AboutUs() {
                     <div className="red">
                         <img src={wp} alt="Whatsapp ICON"></img>
                         <p>Via Whatsapp</p>
-                        <a href="#">+57 318 888 0343</a>
+                        <a href="https://api.whatsapp.com/message/SMCSSCHIC7END1?autoload=1&app_absent=0">+57 318 888 0343</a>
                     </div>
                     <div className="red">
                         <img src={insta} alt="Instagram ICON"></img>
                         <p>Vía Instagram</p>
-                        <a href="#">@dacris.co</a>
+                        <a href="https://www.instagram.com/dacris.co/?hl=es-la">@dacris.co</a>
                     </div>
                     <div className="red">
                         <img src={fb} alt="Facebook ICON"></img>
                         <p>Vía Facebook</p>
-                        <a href="#">Dacris - Tu estilo a la moda</a>
+                        <a href="https://www.facebook.com/dacris.co">Dacris - Tu estilo a la moda</a>
                     </div>
                 </div>
 

@@ -7,7 +7,7 @@ function NavBar() {
     return (
         <Navbar className= "font" fixed="top" style={{ backgroundColor: "white", boxShadow: "5px 5px 3px rgba(46, 46, 46, 0.2)" }} expand="lg">
             <Container fluid>
-                <Navbar.Brand href="/"><img src={logo} style={{ width: "50px"}} /></Navbar.Brand>
+                <Navbar.Brand href="/"><img src={logo} alt= "logo" style={{ width: "50px"}} /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll" className="justify-content-end">
                     <Nav 
