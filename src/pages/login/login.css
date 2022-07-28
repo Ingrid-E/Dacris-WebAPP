@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('http://fonts.cdnfonts.com/css/yellow-playlist');
+@import url('http://fonts.cdnfonts.com/css/playlist');
+
+*{
+    box-sizing: border-box;
+    font-family: 'League Gothic', sans-serif;
+}
+
+section#login>h2{
+    font-family: 'Playlist', sans-serif;
+}
+
+@media (min-width:992px){
+    img#imgPr{
+        position:fixed;
+        width: 68%;
+        height: 100%;
+    }
+    
+    section#login{
+        position: absolute;
+        left:72%;
+        top:35%
+    }
+    
+    img#marAgua{
+        position: absolute;
+        width: 11%;
+        height: 25%;
+        left:79%;
+        top:5%;
+    }
+    
+    section#login > h2{
+        position:relative;
+        padding-bottom: 20%;
+        font-size: 50px;
+        left:8%;
+    }
+    
+    #login > input{
+        font-size: 20px;
+    }
+    
+    div.form-group{
+        position:relative;
+        padding-bottom: 20%;
+        font-size: 22px;
+        left:10%;
+    }
+    
+    button#iniciar{
+        position:fixed;
+        font-size: 20px;
+        background-color: #0E94D4;
+        left:81%;
+        margin-top: 1%;
+    }
+
+    input.form-control{
+        position:fixed;
+        width: 22%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    img#imgPr{
+        position:fixed;
+        width: 68%;
+        height: 100%;
+    }
+    
+    section#login{
+        position: absolute;
+        left:72%;
+        top:30%;
+    }
+    
+    img#marAgua{
+        position: absolute;
+        width: 12%;
+        height: 23%;
+        left:78%;
+        top:5%;
+    }
+    
+    #login > h2{
+        padding-bottom: 20%;
+        font-size: 42px;
+    }
+    
+    #login > input{
+        font-size: 20px;
+    }
+    
+    div.form-group{
+        position: relative;
+        padding-bottom: 30%;
+        font-size: 20px;
+        left:0%;
+    }
+    
+    button#iniciar{
+        position:fixed;
+        font-size: 20px;
+        left:79%;
+        background-color: #0E94D4;
+    }
+
+    input.form-control{
+        position:fixed;
+        width: 25%;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px){
+    img#imgPr{
+        position:fixed;
+        width: 60%;
+        height: 100%;
+    }
+    
+    section#login{
+        position: absolute;
+        left:66%;
+        top:30%
+    }
+    
+    img#marAgua{
+        position: absolute;
+        width: 16%;
+        height: 22%;
+        left:72%;
+        top:5%;
+    }
+    
+    #login > h2{
+        padding-bottom: 20%;
+        font-size: 34px;
+    }
+    
+    #login > input{
+        font-size: 22px;
+    }
+    
+    div.form-group{
+        position:relative;
+        padding-bottom: 40%;
+        font-size: 22px;
+        left:0%;
+    }
+    
+    button#iniciar{
+        position:fixed;
+        font-size: 22px;
+        left:72%;
+        padding: 1%;
+        background-color: #0E94D4;
+    }
+
+    input.form-control{
+        position:fixed;
+        width: 30%;
+    }
+}
+
+@media (min-width:280px) and (max-width:543px){
+    img#imgPr{
+        position:fixed;
+        width: 60%;
+        height: 100%;
+    }
+    
+    section#login{
+        position: absolute;
+        left:66%;
+        top:30%
+    }
+    
+    img#marAgua{
+        position: absolute;
+        width: 20%;
+        height: 16%;
+        left:70%;
+        top:12%;
+    }
+    
+    #login > h2{
+        position:relative;
+        padding-bottom: 20%;
+        font-size: 26px;
+        left:0%;
+    }
+    
+    #login > input{
+        font-size: 16px;
+    }
+    
+    div.form-group{
+        position:relative;
+        padding-bottom: 40%;
+        font-size: 16px;
+        left:0%;
+    }
+    
+    button#iniciar{
+        position:fixed;
+        font-size: 16px;
+        left:70%;
+        padding: 1%;
+        background-color: #0E94D4;
+    }
+
+    input.form-control{
+        position:fixed;
+        width: 30%;
+    }
+}
