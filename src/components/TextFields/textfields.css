@@ -28,7 +28,7 @@
     gap: 0.3rem;
 }
 
-.form_textfield h1 {
+.form_textfield h1, .form_dropdown h1 {
     font-family: 'League Gothic';
     font-style: normal;
     font-weight: 400;
@@ -37,7 +37,7 @@
     letter-spacing: 0.03em;
 }
 
-.form_textfield input{
+.form_textfield input, .form_dropdown select{
     background-color: white;
     outline: darkgray solid 1px;
     width: 20rem;

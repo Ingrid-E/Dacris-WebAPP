@@ -5,6 +5,7 @@ import './buttons.css'
 
 const ImageButton = (props) => {
     const {text, sendURL} = props
+    
     const sendImage = (e)=> {
         let reader = new FileReader()
         reader.onload = function(e) {

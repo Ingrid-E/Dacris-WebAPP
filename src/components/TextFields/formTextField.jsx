@@ -3,14 +3,15 @@ import './textfields.css'
 
 
 const FormTextField = (props) => {
-    const {placeholder, action, title, size} = props
+    const {placeholder, action, title, size, type, state} = props
+
     return (
         <div className='form_textfield'>
             <h1>{title}</h1>
             {size === 'big'? 
-            (<textarea id="long" rows="5" cols="40"></textarea>)
+            (<textarea style= {state === "error"? {outline: "red solid 1px"}:{outline: "darkgray solid 1px"}} id="long" rows="5" cols="40"  onChange={action}></textarea>)
             :
-            (<input type="value" placeholder={placeholder}></input>)}
+            (<input style= {state === "error"? {outline: "red solid 1px"}:{outline: "darkgray solid 1px"}}type={type} placeholder={placeholder}  onChange={action}></input>)}
     
         </div>
     )

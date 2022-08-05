@@ -22,7 +22,7 @@
     border: none;
 }
 
-.admin_button button:hover {
+.admin_button button:hover, .admin_imageButton label:hover {
     background: #115E83;
 }
 
