@@ -9,7 +9,19 @@
     background-color: #90D8FF;
     gap: 1rem;
     padding: 30px 30px;
+
 }
+
+.admin_product_add .loading_overlay {
+    background-color: rgba(0, 0, 0, 0.404);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    padding: 30px 30px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .admin_product_add .product_data {
     display: flex;
     flex-direction: row;
@@ -27,3 +39,41 @@
     flex-direction: row;
     gap: 20px;
 }
+
+.admin_product_add .information_buttons div h1, .admin_product_add .info_size h1{
+    font-family: 'League Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-shadow: none;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.admin_product_add .information_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.admin_product_add .information_buttons div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin_product_add .info_size div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.admin_product_add .info_size div div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+

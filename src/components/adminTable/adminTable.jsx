@@ -46,6 +46,7 @@ const AdminTable = () => {
     const handleKeyPress = async (e) => {
         if (e.key === "Enter") {
             pagination.filter = e.target.value
+            pagination.page = 1
             call();
         }
     }
@@ -86,7 +87,8 @@ const AdminTable = () => {
         }
         if(popout.title === 'Agregar'){
             return (
-            <AdminProductAdd/>
+            <AdminProductAdd
+            state={popout.state}/>
             )
         }
         return <div></div>
@@ -96,6 +98,7 @@ const AdminTable = () => {
 
     const handleDelete = async () => {
         await deleteProducts(checkedProducts)
+        pagination.page = 1
         await call()
         await call()
         setPopOut({state: 'closed'})

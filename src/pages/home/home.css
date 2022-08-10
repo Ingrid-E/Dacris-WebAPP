@@ -113,6 +113,6 @@ ul {
 h1 {
   font-family: 'Playlist Script';
   font-size: 80px;
-  color: black !important;
+  color: black;
   text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }

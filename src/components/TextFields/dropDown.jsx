@@ -4,7 +4,7 @@ import { getCategories } from '../../api/categories'
 
 
 const DropDown = (props) => {
-    const {title, action} = props
+    const {title, action, state} = props
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -20,10 +20,11 @@ const DropDown = (props) => {
     return (
         <div className='form_dropdown'>
             <h1>{title}</h1>
-            <select name="category" id="category" onChange={action}>
+            <select style= {state === "error"? {outline: "red solid 1px"}:{}} name="category" id="category" onChange={action}>
+            <option disabled selected value> -- Seleciona una categoria -- </option>
             {
                 categories.map((category, i)=> (
-                    <option value={category.pk_category}>{category.name}</option>
+                    <option value={category.pk_category} key={category.pk_category}>{category.name}</option>
                 ))
             }
             </select>

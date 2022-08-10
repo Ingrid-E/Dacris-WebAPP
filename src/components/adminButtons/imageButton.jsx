@@ -1,17 +1,14 @@
-import { render } from '@testing-library/react'
 import React from 'react'
 import './buttons.css'
+import { uploadImage } from '../../api'
 
 
 const ImageButton = (props) => {
-    const {text, sendURL} = props
+    const {text, sendFile} = props
     
-    const sendImage = (e)=> {
-        let reader = new FileReader()
-        reader.onload = function(e) {
-            sendURL(e.target.result)
-        }
-        reader.readAsDataURL(e.target.files[0])
+    const sendImageFile = (e) => {
+        let file = e.target.files[0];
+        //uploadImage(file)
     }
 
     return (
@@ -20,7 +17,9 @@ const ImageButton = (props) => {
                 {text}
                 <input type="file" id="product_img"
                 accept='image/png, image/jpeg'
-                onChange={sendImage}
+                onChange={(e)=> {
+                    sendFile(e)
+                }}
                 />
             </label>
 

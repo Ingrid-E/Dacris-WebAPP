@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ImageButton from '../adminButtons/imageButton'
 import './productImageAdd.css'
 import { FileArrowUp } from 'react-bootstrap-icons'
+import { uploadImage } from '../../api'
 
 const ProductImageAdd = (props) => {
     const [images, setImages] = useState([])
@@ -11,11 +12,15 @@ const ProductImageAdd = (props) => {
     useEffect(() => {
     }, [images, index])
 
-    const fileReader = async (url) => {
-        await setImages([...images, url])
-        returnImages([...images, url])
+    const fileReader = async (e) => {
+        let file  = e.target.files[0];
+        returnImages(file)
+        let reader = new FileReader()
+        reader.onload = function(e) {
+            setImages([...images, e.target.result])
+        }
+        reader.readAsDataURL(e.target.files[0])
     }
-
     return (
         <div className="product_add_images">
             <div className='images_options'></div>
@@ -27,7 +32,7 @@ const ProductImageAdd = (props) => {
                         <div className='image_index'>
                         {
                             images.map((image, i) => (
-                                <button style={index === i? {background: "#115E83"}:{background:"white"}} onClick={()=>setIndex(i)}></button>
+                                <button key={i} style={index === i? {background: "#115E83"}:{background:"white"}} onClick={()=>setIndex(i)}></button>
                             ))
                         }
                         </div>
@@ -40,7 +45,7 @@ const ProductImageAdd = (props) => {
                     </div>)}
 
             </div>
-            <ImageButton text="SUBIR IMAGEN" sendURL={fileReader} />
+            <ImageButton text="SUBIR IMAGEN" sendFile={fileReader}/>
         </div>
     )
 }
