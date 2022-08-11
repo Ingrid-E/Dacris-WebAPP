@@ -21,7 +21,7 @@ function Sales() {
             <div className="title"> <img src={location} alt="location">
             </img> ¿Donde estamos ubicados?! <img src={location} alt="location">
                 </img></div>
-            <div className="sales_container" >
+            <div className="sales_container">
                 <div className="container_info">
                     <img className="image" data-aos="fade-up" src={sur} alt="Sede Sur"></img>
                     <div className="info_text">
