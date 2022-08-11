@@ -1,4 +1,5 @@
 import api from './posts'
+const baseURL = 'http://localhost:8080/product_category'
 
 const getCategories = async () => {
     try {

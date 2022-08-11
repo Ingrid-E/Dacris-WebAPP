@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('http://fonts.cdnfonts.com/css/yellow-playlist');
+@import url('http://fonts.cdnfonts.com/css/playlist');
+
+.login *{
+    box-sizing: border-box;
+    font-family: 'League Gothic', sans-serif;
+}
+
+.login section.panel>h2{
+    font-family: 'Playlist', sans-serif;
+}
+
+    .login img.imgPr{
+        position:fixed;
+        width: 68%;
+        height: 100%;
+    }
+    
+    .login section.panel{
+        position: absolute;
+        left:72%;
+        top:35%
+    }
+    
+    .login img.agua{
+        position: absolute;
+        width: 11%;
+        height: 25%;
+        left:79%;
+        top:5%;
+    }
+    
+    .login section.panel > h2{
+        position:relative;
+        padding-bottom: 20%;
+        font-size: 50px;
+        left:8%;
+    }
+    
+    .login .panel > input{
+        font-size: 20px;
+    }
+    
+    .login div.form-group{
+        position:relative;
+        padding-bottom: 20%;
+        font-size: 22px;
+        left:10%;
+    }
+    
+    .login button.btn-primary{
+        position:fixed;
+        font-size: 20px;
+        background-color: #0E94D4;
+        left:81%;
+        margin-top: 1%;
+    }
+
+    .login input.form-control{
+        position:fixed;
+        width: 22%;
+    }
+
+
+@media (min-width:768px) and (max-width:991px){
+    .login img.imgPr{
+        position:fixed;
+        width: 68%;
+        height: 100%;
+    }
+    
+    .login section.panel{
+        position: absolute;
+        left:72%;
+        top:30%;
+    }
+    
+    .login img.agua{
+        position: absolute;
+        width: 12%;
+        height: 23%;
+        left:78%;
+        top:5%;
+    }
+    
+    .login .panel > h2{
+        padding-bottom: 20%;
+        font-size: 42px;
+    }
+    
+    .login .panel > input{
+        font-size: 20px;
+    }
+    
+    .login div.form-group{
+        position: relative;
+        padding-bottom: 30%;
+        font-size: 20px;
+        left:0%;
+    }
+    
+    .login button.btn-primary{
+        position:fixed;
+        font-size: 20px;
+        left:79%;
+        background-color: #0E94D4;
+    }
+
+    .login input.form-control{
+        position:fixed;
+        width: 25%;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px){
+    .login img.imgPr{
+        position:fixed;
+        width: 60%;
+        height: 100%;
+    }
+    
+    .login section.panel{
+        position: absolute;
+        left:66%;
+        top:30%
+    }
+    
+    .login img.agua{
+        position: absolute;
+        width: 16%;
+        height: 22%;
+        left:72%;
+        top:5%;
+    }
+    
+    .login .panel > h2{
+        padding-bottom: 20%;
+        font-size: 34px;
+    }
+    
+    .login .panel > input{
+        font-size: 22px;
+    }
+    
+    .login div.form-group{
+        position:relative;
+        padding-bottom: 40%;
+        font-size: 22px;
+        left:0%;
+    }
+    
+    .login button.btn-primary{
+        position:fixed;
+        font-size: 22px;
+        left:72%;
+        padding: 1%;
+        background-color: #0E94D4;
+    }
+
+    .login input.form-control{
+        position:fixed;
+        width: 30%;
+    }
+}
+
+@media (min-width:280px) and (max-width:543px){
+    .login img.imgPr{
+        position:fixed;
+        width: 60%;
+        height: 100%;
+    }
+    
+    .login section.panel{
+        position: absolute;
+        left:66%;
+        top:30%
+    }
+    
+    .login img.agua{
+        position: absolute;
+        width: 20%;
+        height: 16%;
+        left:70%;
+        top:12%;
+    }
+    
+    .login .panel > h2{
+        position:relative;
+        padding-bottom: 20%;
+        font-size: 26px;
+        left:0%;
+    }
+    
+    .login .panel > input{
+        font-size: 16px;
+    }
+    
+    .login div.form-group{
+        position:relative;
+        padding-bottom: 40%;
+        font-size: 16px;
+        left:0%;
+    }
+    
+    .login button.btn-primary{
+        position:fixed;
+        font-size: 16px;
+        left:70%;
+        padding: 1%;
+        background-color: #0E94D4;
+    }
+
+    .login input.form-control{
+        position:fixed;
+        width: 30%;
+    }
+}

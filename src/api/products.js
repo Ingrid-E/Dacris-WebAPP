@@ -1,11 +1,56 @@
+import { wait } from '@testing-library/user-event/dist/utils';
 import { getCategories } from './categories'
-import { getImages } from './images'
-const baseURL = 'https://dacris-backend.herokuapp.com/'
+import { getImages, postImage } from './images'
+import { uploadImage } from './s3_images'
+const baseURL = 'http://localhost:8080/'
 
+var axios = require('axios');
+var qs = require('qs');
+
+
+const postProduct = async (product) => {
+
+    var data = qs.stringify({
+        'name': product.name,
+        'description': product.description,
+        'price': product.price,
+        'size': product.size,
+        'id_category': product.category,
+        'in_store': product.inStore,
+        'available': product.available
+    });
+
+    var config = {
+        method: 'post',
+        url: 'http://localhost:8080/product',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: data
+    };
+
+    const response = await axios(config)
+        .then( async function (response) {
+            return response.data
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    let index = 0
+    const product_id = response.product_id
+    for await (let img of product.images){
+        await postImage(index, img, product_id)
+        index++
+    }
+
+    console.log("waiting images")
+    return response
+
+}
 
 const getProducts = async (page, limit, filter = '') => {
     try {
-        const response = await fetch(baseURL+`product/pagination?page=${page}&limit=${limit}&filter=${filter}`, {
+        const response = await fetch(baseURL + `product/pagination?page=${page}&limit=${limit}&filter=${filter}`, {
             method: "GET",
             redirect: 'follow'
         })
@@ -35,7 +80,7 @@ const getProducts = async (page, limit, filter = '') => {
                 product.images = product_images
             });
             console.log(length)
-            return {products: products, length: length}
+            return { products: products, length: length }
         }
 
     } catch (err) {
@@ -43,24 +88,24 @@ const getProducts = async (page, limit, filter = '') => {
     }
 }
 
-const deleteProducts = async(products) => {
-        products.forEach(async id_product  => {
-            try{
-                await fetch(baseURL+`product/${id_product}`, {
-                    method: "DELETE",
-                    redirect: 'follow'
-                })
+const deleteProducts = async (products) => {
+    products.forEach(async id_product => {
+        try {
+            await fetch(baseURL + `product/${id_product}`, {
+                method: "DELETE",
+                redirect: 'follow'
+            })
 
-                return true
-            }catch(err){
-                console.error(err)
-                return false
-            }
+            return true
+        } catch (err) {
+            console.error(err)
+            return false
+        }
 
-        })
+    })
 
-        return true
+    return true
 
 }
 
-export { getProducts, deleteProducts}
+export { getProducts, deleteProducts, postProduct }

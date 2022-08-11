@@ -1,47 +1,62 @@
-import React from "react";
-import {Helmet} from "react-helmet";
-import { Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
 import "./login.css";
+import logo from "../../assets/Marca de Agua.png";
+import loginSubmit from "../../api/login";
+import Button from "../../components/adminButtons/button";
 
-import logo from "./img/Marca de Agua.png";
-import portada from "./img/FOTO FERIA 2.png";
-//import "./css/bootstrap.min.css";
 
-function Login(){
-    return(
-        <>
-
-        <helmet>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <script src="js/jquery-1.11.3.min.js"/>
-            <script src="js/bootstrap.min.js"/>
-            <script src="js/script.js"/>
-        </helmet>
-
-         <div id="mainImg">
-            <img src={portada} id="imgPr"/>
-         </div>
+const Login = () => {
   
-  <section id="agua">
-    <img src={logo} id="marAgua"/>
-  </section>
-  
-  <section id="login">
-    <h2>Iniciar Sesión</h2>
-    <form className="verificar">
-      <div className="form-group">
-        <label for="exampleInputEmail1" id="user">Usuario</label>
-        <input type="email" className="form-control" id="user" aria-describedby="emailHelp"/>
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    email: "",
+    password: ""
+  })
+
+  const validate = async (e) => {
+    e.preventDefault();
+    const response = await loginSubmit(user);
+   
+    response.success ? navigate("/home") : console.log("Intentelo de nuevo!");
+   
+  };
+
+  const handleChange = (e, name) => {
+    setUser({ ...user, [name]: e.target.value })
+  }
+
+
+  return (
+
+    <div className="login">
+      <div className="portada">
+
+    </div>
+      <div className="loginRight">
+        <img src={logo} className="logo"/>
+        <h2>Iniciar Sesión</h2>
+        <form className="verificar" onSubmit={(e) => validate(e)}>
+
+          <div className="form-group">
+            <label for="exampleInputEmail1">Usuario</label>
+            <input type="email" className="form-control" onChange={(e) => handleChange(e, "email")} aria-describedby="emailHelp" />
+          </div>
+
+          <div className="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" className="form-control" onChange={(e) => handleChange(e, "password")} />
+          </div>
+
+          <Button text="Iniciar sesion" type="submit"/>
+
+        </form>
       </div>
-      <div className="form-group">
-        <label for="exampleInputPassword1" id="password">Contraseña</label>
-        <input type="password" className="form-control" id="password"/>
-      </div>
-      <button id="iniciar" type="submit" className="btn btn-primary">Iniciar sesion</button>
-    </form>
-  </section>
-</>
-    )
+    </div>
+  )
 }
+
+
 
 export default Login;
