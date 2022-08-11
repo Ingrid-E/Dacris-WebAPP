@@ -4,15 +4,24 @@ import FormTextField from '../TextFields/formTextField'
 import Button from '../adminButtons/button'
 import ProductImageAdd from './productImageAdd'
 import DropDown from '../TextFields/dropDown'
-import { postProduct, postImage} from '../../api'
+import { postProduct, putProduct} from '../../api'
 import CheckButton from '../adminButtons/checkButton'
 import RadioButton from '../adminButtons/radioButton'
-import Loading from '../loading/loading'
+import Loading from '../animations/loading'
+
+
 const AdminProductAdd = (props) => {
-    let {state} = props
+    let {state, clickAction, oldInfo} = props
     const [product, setProduct] = useState({name: '', price: '', category: '', description: '', images: [], available:false, inStore:false, size: ''})
     const [fieldsState, setFieldsState] = useState({name: "normal", price: "normal", category: "normal", description: "normal", images: "normal", available:"normal", inStore: "normal", size: "normal"})
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState("not");
+
+    useEffect(()=> {
+        if(oldInfo !== undefined){
+            console.log("OldInfo images: ", oldInfo.images)
+            setProduct({name: oldInfo.name, price: oldInfo.price, category: oldInfo.fk_category_product, description: oldInfo.description, images: oldInfo.images, available: oldInfo.available, inStore: oldInfo.in_store, size: oldInfo.size})
+        }
+    }, [])
 
     useEffect(()=>{
 
@@ -28,23 +37,35 @@ const AdminProductAdd = (props) => {
 
 
     const createProduct = async () => {
-        //console.log("Product Being Clicked")
         if(checkValues()){
-            setLoading(true)
+            setLoading("loading...")
             const response = await postProduct(product)
-            console.log("RESPONSE: ", response)
             if(response.success){
-                setLoading(false)
+                setLoading("finished")
+                clickAction()
             }
             
         }
     }
 
+    const updateProduct = async () => {
+        console.log("Actualizando Producto")
+        if(checkValues()){
+            setLoading("loading...")
+            const response = await putProduct(product, oldInfo.pk_product)
+            if(response.success){
+                setLoading("finished")
+                clickAction()
+            }
+        }
+    }
+
     const checkValues = () => {
         let completed = true
+
         Object.entries(product).forEach(([key,value])=>{
-            if(value === '' ||value.length === 0){
-                console.log(key, value)
+            console.log(key, value)
+            if(value === '' || value.length < 0){
                 fieldsState[key] = "error"
                 completed = false
             }else{
@@ -57,39 +78,42 @@ const AdminProductAdd = (props) => {
     }
 
     return (
-        <div className="admin_product_add">
-            {loading? (<div className='loading_overlay'>
-                <Loading/>
+        <div className="admin_product_add" style={state === "open"? {visibility: "visible"}: {visibility:"hidden"}}>
+            {loading !== "not"? (<div className='loading_overlay' style={loading === "success"? {background: "none"}:{}}>
+                <Loading />
                 </div>
             
            ): <div/>}
-        
             <div className='product_data'>
                 <div className='add_image'>
-                    <ProductImageAdd returnImages={loadImages} state={fieldsState.images}/>
+                    <ProductImageAdd returnImages={loadImages} state={fieldsState.images} files={product.images}/>
                 </div>
                 <div className='add_information'>
                     <FormTextField
                     title = "Nombre"
                     action={(e) => handleKeyPress(e, "name")}
                     type = "value"
-                    state = {fieldsState.name}/>
+                    state = {fieldsState.name}
+                    value={product.name}/>
                     <FormTextField
                     title = "Precio"
                     action={(e) => handleKeyPress(e, "price")}
+                    value={product.price}
                     type = "number"
                     state={fieldsState.price}/>
                     <DropDown
                     title = "Categoria"
                     state={fieldsState.category}
                     action={(e) => handleKeyPress(e, "category")}
+                    value={product.category}
                     />
                     <FormTextField
                     title = "Descripcion"
                     size = "big"
                     action={(e) => handleKeyPress(e, "description")}
                     type = "value"
-                    state={fieldsState.description}/>
+                    state={fieldsState.description}
+                    value={product.description}/>
                     <div className='information_buttons'>
                         <div>
                             <div onClick={()=>setProduct({...product, available:!product.available})}>
@@ -105,7 +129,7 @@ const AdminProductAdd = (props) => {
                         </div>
                     </div>
                     <div  className='info_size'>
-                        <h1 style={fieldsState.size ==="error"? {color:"darkred"}:{}}>Tamaño</h1>
+                        <h1 style={fieldsState.size ==="error"? {color:"red"}:{}}>Tamaño</h1>
                         <div>
                             <div>
                                 <div onClick={()=>setProduct({...product, size: "S"})}>
@@ -131,8 +155,9 @@ const AdminProductAdd = (props) => {
             </div>
             <div className='add_buttons'>
             <Button text = "CANCELAR"
-                style = "Cancel"/>
-                <Button text = "AGREGAR PRODUCTO" action={createProduct}/>
+                style = "Cancel"
+                action={()=>clickAction("Cancel")}/>
+                <Button text = {oldInfo !== undefined? "ACTUALIZAR PRODUCTO":"AGREGAR PRODUCTO"} action={oldInfo !== undefined? updateProduct:createProduct}/>
             </div>
         </div>
     )

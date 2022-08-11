@@ -50,6 +50,12 @@
     resize: none;
 }
 
+.form_textfield p, .form_dropdown p {
+    margin: 0;
+    color: red;
+    font-size: 12px;
+}
+
 .form_textfield textarea{
     background-color: white;
     outline: darkgray solid 1px;

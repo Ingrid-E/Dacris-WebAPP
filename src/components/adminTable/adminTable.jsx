@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './adminTable.css'
 import AdminTableRow from './adminTableRows'
-import { getProducts, deleteProducts} from '../../api/index'
+import { getProducts, deleteProducts, getProduct} from '../../api/index'
 import { CaretLeftFill, CaretRightFill, TrashFill, PlusLg, PencilFill} from 'react-bootstrap-icons'
 import RoundTextField from '../TextFields/roundTextField'
 import ConfirmationPopOut from '../confirmationPopOut/confirmationPopOut'
 import AdminProductAdd from '../adminProductAdd/adminProductAdd'
+import CheckMark from '../animations/checkMark'
 
 const AdminTable = () => {
     //Fetch Data
@@ -15,9 +16,13 @@ const AdminTable = () => {
     const [popout, setPopOut] = useState({state:'close'})
 
     useEffect(() => {
+    }, [checkedProducts])
+
+    useEffect(() => {
         call();
         //eslint-disable-next-line
     }, [])
+
 
     const call = async () => {
         const callProducts = await getProducts(pagination.page, pagination.limit, pagination.filter)
@@ -26,20 +31,13 @@ const AdminTable = () => {
     }
 
     const nextPage = () => {
-        /*
-        if product length = 10, limit =5 nextButton is enabled till
-        if page * limit >= product.length then not enabled
-
-        */
         ++pagination.page
-        console.log(pagination)
         call();
 
     }
 
     const prevPage = () => {
         --pagination.page
-        console.log(pagination)
         call();
     }
 
@@ -51,23 +49,31 @@ const AdminTable = () => {
         }
     }
 
-    const handleCheckedProducts = (id_product, value) =>{
+    const handleCheckedProducts = async (id_product, value) =>{
         if(value){
-            checkedProducts.push(id_product)
+            setCheckedProducts([...checkedProducts, id_product])
         }else{
             checkedProducts.splice(checkedProducts.indexOf(id_product), 1)
+            let clone = [...checkedProducts]
+            setCheckedProducts([...clone])
         }
-        console.log(checkedProducts)
     }
 
     const openPopOut = async (name = '')=>{
         if(name === 'Delete'){
             setCheckedProducts(checkedProducts)
-            await setPopOut({state:'open', title: 'Eliminar', description: 'Estas seguro que quieres eliminar este producto?', confirmation: 'Continuar', action: handleDelete})
+            setPopOut({state:'open', title: 'Eliminar', description: 'Estas seguro que quieres eliminar este producto?', confirmation: 'Continuar', action: handleDelete})
         }
         if(name === 'Add'){
             setCheckedProducts(checkedProducts)
-            await setPopOut({state:'open', title: 'Agregar'})
+            setPopOut({state:'open', title: 'Agregar', action: handleAdd})
+        }
+        if(name === 'Edit'){
+            setCheckedProducts(checkedProducts)
+            let product = await getProduct(checkedProducts[0]).then(res=>{
+                return res
+            })
+            setPopOut({state:'open', title: 'Editar', action: handleAdd, oldInfo: product})
         }
         renderPopOut()
         return true
@@ -75,7 +81,7 @@ const AdminTable = () => {
 
 
     const renderPopOut = () => {
-        if(popout.title === 'Eliminar'){
+        if(popout.title === 'Eliminar' && checkedProducts.length > 0){
             return (
             <ConfirmationPopOut
             state={popout.state}
@@ -88,28 +94,53 @@ const AdminTable = () => {
         if(popout.title === 'Agregar'){
             return (
             <AdminProductAdd
-            state={popout.state}/>
+            state={popout.state}
+            clickAction={popout.action}/>
+            )
+        }
+        if(popout.title === 'Editar'){
+            return (
+            <AdminProductAdd
+            state={popout.state}
+            oldInfo = {popout.oldInfo}
+            clickAction={popout.action}/>
             )
         }
         return <div></div>
+    }
+
+    const handleDelete = async (button) => {
+        if(button !== "Cancel" && checkedProducts.length > 0){
+            await deleteProducts(checkedProducts)
+            await call()
+            pagination.page = 1
+            setPopOut({state: 'closed', status:"success"})
+            setTimeout(()=>{setPopOut({state:'closed', status:'finished'})}, 1500)
+            setCheckedProducts([])
+        }else if(button === "Cancel" ){
+            setPopOut({state: 'closed'})
+        }
         
-
     }
 
-    const handleDelete = async () => {
-        await deleteProducts(checkedProducts)
-        pagination.page = 1
-        await call()
-        await call()
-        setPopOut({state: 'closed'})
-        setCheckedProducts([])
+    const handleAdd = async(button)=>{
+        if(button !== "Cancel"){
+            await call()
+            setPopOut({state: 'closed', status:"success"})
+            setTimeout(()=>{setPopOut({state:'closed', status:'finished'})}, 1500)
+            pagination.page = 1
+        }else if(button === "Cancel" ){
+            setPopOut({state: 'closed'})
+        }
     }
+
     
 
     return (
         
         <div className="admin_table">
             {renderPopOut()}
+            {popout.status === "success"? <CheckMark/>:<div></div>}
 
             <h1>Product Table</h1>
             <div className='admin_table_options'>
@@ -122,8 +153,11 @@ const AdminTable = () => {
                 <TrashFill 
                 className='table_options_icons'
                 onClick={()=>openPopOut("Delete")}/>
+                <div style={checkedProducts.length !== 1? {visibility: "hidden"}: {visibility: "visible"}}>
                 <PencilFill
-                className='table_options_icons'/>
+                className='table_options_icons'
+                onClick={()=>openPopOut("Edit")}/>
+                </div>
 
             </div>
             <br></br>

@@ -7,10 +7,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #90D8FF;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 30px 30px;
 
 }
+
 
 .admin_product_add .loading_overlay {
     background-color: rgba(0, 0, 0, 0.404);

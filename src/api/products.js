@@ -1,7 +1,6 @@
-import { wait } from '@testing-library/user-event/dist/utils';
 import { getCategories } from './categories'
-import { getImages, postImage } from './images'
-import { uploadImage } from './s3_images'
+import { getImages, postImage, getProductImages} from './images'
+
 const baseURL = 'http://localhost:8080/'
 
 var axios = require('axios');
@@ -30,7 +29,7 @@ const postProduct = async (product) => {
     };
 
     const response = await axios(config)
-        .then( async function (response) {
+        .then(async function (response) {
             return response.data
         })
         .catch(function (error) {
@@ -38,7 +37,7 @@ const postProduct = async (product) => {
         });
     let index = 0
     const product_id = response.product_id
-    for await (let img of product.images){
+    for await (let img of product.images) {
         await postImage(index, img, product_id)
         index++
     }
@@ -108,4 +107,59 @@ const deleteProducts = async (products) => {
 
 }
 
-export { getProducts, deleteProducts, postProduct }
+const getProduct = async (id_product) => {
+
+    var config = {
+        method: 'get',
+        url: baseURL + `product/${id_product}`,
+        headers: {},
+    };
+
+    const response = await axios(config)
+        .then(function (response) {
+            return response.data
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    
+    const getImages = await getProductImages(id_product)
+    response.images = getImages.images
+    return response;
+
+}
+
+const putProduct = async (product, id) => {
+    console.log("Put product", product)
+    var data = qs.stringify({
+        'name': product.name,
+        'description': product.description,
+        'price': product.price,
+        'size': product.size,
+        'id_category': product.category,
+        'in_store': product.inStore,
+        'available': product.available
+    });
+
+    var config = {
+      method: 'put',
+      url: baseURL + `product/${id}`,
+      headers: { 
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data : data
+    };
+    
+    const response = await axios(config)
+        .then(function (response) {
+            return response.data
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    
+    return response;
+    
+}
+
+export { putProduct, getProducts, deleteProducts, postProduct, getProduct}

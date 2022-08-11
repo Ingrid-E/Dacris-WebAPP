@@ -1,15 +1,9 @@
 import React from 'react'
 import './buttons.css'
-import { uploadImage } from '../../api'
 
 
 const ImageButton = (props) => {
     const {text, sendFile} = props
-    
-    const sendImageFile = (e) => {
-        let file = e.target.files[0];
-        //uploadImage(file)
-    }
 
     return (
         <div className="admin_imageButton">
