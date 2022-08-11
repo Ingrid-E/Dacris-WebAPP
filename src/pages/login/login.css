@@ -19,8 +19,18 @@
     width: 100%;
 }
 
+.login .loginRight > h2{
+    font-family: 'Playlist', sans-serif;
+    font-size:50px;
+    margin-top:30px;
+}
+
 .login .loginRight .logo{
-    width: 120px;
+    width: 140px;
+}
+
+.login .loginRight .form-group label{
+    font-size:22px;
 }
 
 .login .portada{
@@ -35,5 +45,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top:30px;
 }
 
+.login .loginRight .form-group input{
+    width:20vw;
+}
+
+@media (min-width:544px) and (max-width:991px){
+    
+    .login .loginRight > h2{
+        font-size:40px;
+    }
+    
+    .login .loginRight .logo{
+        width: 115px;
+    }
+
+    .login .loginRight .form-group label{
+        font-size:20px;
+    }
+
+    .login .portada{
+        background-image: url("../../assets/FOTO FERIA 2.png");
+        width: 150vw;
+    }
+
+    .login .loginRight .form-group input{
+        font-size:20px;
+    }
+
+    .login .loginRight Button{
+        font-size:20px;
+    }
+}
+
+@media (min-width:280px) and (max-width:543px){
+        
+    .login .portada{
+        width:fit-content;
+    }
+
+    .login .loginRight .form-group input{
+        width: 40vw;
+        font-size: 18px;
+    }
+
+    .login .loginRight Button{
+        font-size:18px;
+    }
+ 
+}
