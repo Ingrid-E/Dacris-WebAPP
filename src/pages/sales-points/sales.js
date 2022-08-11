@@ -19,7 +19,7 @@ function Sales() {
         <div className="sales" >
             <NavBar />
             <div className="title"> <img src={location} alt="location">
-            </img> ¿Donde estamos ubicados? <img src={location} alt="location">
+            </img> ¿Donde estamos ubicados?! <img src={location} alt="location">
                 </img></div>
             <div className="sales_container" >
                 <div className="container_info">
