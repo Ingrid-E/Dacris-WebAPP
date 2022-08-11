@@ -2,7 +2,8 @@
     background-color: #ffffff;
     text-align: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 0px;
+    box-shadow: 2px 5px 5px 5px gray;
 }
 
 .footerR .row {

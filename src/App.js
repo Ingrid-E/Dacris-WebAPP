@@ -4,6 +4,8 @@ import {Home, Login} from "./pages/index"
 //import { navbar, socialMedia} from './components';
 //import ButtonsNext from "./components/buttonNext/ButtonsNext";
 import AboutUs from "./pages/aboutus/about-us";
+import FrecuentQuestions from "./pages/frequent-questions/frequent-questions";
+import Sales from "./pages/sales-points/sales"
 import './app.css'
 
 
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/nosotros' element={<AboutUs/>}/>
+          <Route path='/preguntas-frecuentes' element={<FrecuentQuestions/>}/>
+          <Route path='/puntos-ventas' element={<Sales/>}/>
           <Route path='/login' element={<Login/>}/>
         </Routes>
       </Router>

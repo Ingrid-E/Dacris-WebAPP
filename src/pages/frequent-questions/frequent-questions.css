@@ -1,0 +1,98 @@
+.frequent-questions * {
+    text-shadow: none;
+    color: black;
+}
+
+.frequent-questions nav {
+    width: 100vw;
+}
+
+.frequent-questions {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.frequent-questions .title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Playlist Script';
+    font-size: 50px;
+    text-shadow: none;
+}
+
+.frequent-questions .frequent-questions_container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    width: 100vw;
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.frequent-questions .frequent-questions_container ul {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.frequent-questions .frequent-questions_container button {
+    display: flex;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #D6ECFA;
+    margin: 10px 40px 10px 20px;
+    height: 60px;
+    box-shadow: 2px 2px 5px gray;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+    text-shadow: none;
+    color: black;
+    border: none;
+    padding: 10px;
+    flex-direction: column;
+    flex-flow: row;
+    outline: none;
+    justify-content: space-between;
+}
+
+.frequent-questions .frequent-questions_container button::after {
+    content: "+";
+    padding: 9px;
+    padding-top: 5px;
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.frequent-questions .frequent-questions_container .content {
+    text-align: left;
+    padding-left: 32px;
+    padding-bottom: 15px;
+    display: block;
+
+}
+
+.frequent-questions .frequent-questions_container .accordion {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px
+}
+
+.frequent-questions .frequent-questions_container .accordion-content {
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.frequent-questions .frequent-questions_container .accordion-content .imageA {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 600px;
+}
