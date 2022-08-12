@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 import logo from "../../assets/Marca de Agua.png";
 import loginSubmit from "../../api/login";
-import * as Icon from 'react-bootstrap-icons';
 import Button from "../../components/adminButtons/button";
 
 
@@ -19,9 +18,7 @@ const Login = () => {
   const validate = async (e) => {
     e.preventDefault();
     const response = await loginSubmit(user);
-
-    response.success ? navigate("/home") : navigate("/login");
-
+    if(response.success) navigate("/admin", {state: user})
   };
 
   const handleChange = (e, name) => {

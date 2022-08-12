@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import './adminMenu.css'
 import { BagFill, CardImage, Tag, Folder, BoxArrowRight, ChevronDoubleLeft } from 'react-bootstrap-icons'
+import { useNavigate } from 'react-router-dom'
 
-
-const AdminMenu = () => {
+const AdminMenu = (props) => {
+    const {current} = props
     const [menuState, setMenuState] = useState(true)
+    const navigate = useNavigate();
     return (
         <div className="admin_menu">
             <nav className={menuState? 'menu menu_open': 'menu menu_close'}>
@@ -13,7 +15,7 @@ const AdminMenu = () => {
                     <ChevronDoubleLeft role="close or open"/>
                 </div>
                 <div className='menu_navigation'>
-                    <div className='menu_option'>
+                    <div className={current === "products"? 'menu_option current':'menu_option'}>
                         <BagFill />
                         <h1>Productos</h1>
                     </div>
@@ -31,7 +33,9 @@ const AdminMenu = () => {
                     </div>
                 </div>
                 </div>
-                <div className='menu_option menu_exit_option'>
+                <div className='menu_option menu_exit_option' onClick={() => {
+                navigate("/login", { replace: true });
+              }}>
                     <BoxArrowRight />
                     <h1>Salir</h1>
                 </div>

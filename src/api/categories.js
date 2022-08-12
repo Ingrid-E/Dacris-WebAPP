@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import api from './posts'
-=======
->>>>>>> Ingrid-Admin-Components
 const baseURL = 'http://localhost:8080/product_category'
 
 const getCategories = async () => {
