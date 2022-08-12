@@ -12,7 +12,6 @@ const DropDown = (props) => {
             setCategories( callCategories)
         }
         call()
-        console.log(categories)
         //eslint-disable-next-line
     }, [])
 

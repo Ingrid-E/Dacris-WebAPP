@@ -14,6 +14,7 @@ const AdminTableRow = (props) => {
             }
         }
         isChecked()
+        currencyFormat(price)
         //eslint-disable-next-line
     }, [])
 
@@ -27,6 +28,19 @@ const AdminTableRow = (props) => {
         }
     }
 
+    const currencyFormat = (money)=> {
+        let currency = money.toString();
+        console.log("CURRENCY: ", currency)
+        //console.log(currency.substring(0,3))
+        //console.log(currency.substring(3, currency.length))
+        let start = currency.length-3
+        for(let i = start-3; i>0; i-=3){
+            currency=currency.substring(0, i)+'.'+currency.substring(i, start)
+            i++
+        }
+        console.log("NEW CURRENCY: ", currency)
+    }
+
 
     return (
             <tr className="admin_table_row" style={checked? {backgroundColor: "#CEEEFF"}: index%2 === 0? {backgroundColor: "white"}: {backgroundColor: "#F2F2F2"}}>
@@ -36,7 +50,7 @@ const AdminTableRow = (props) => {
                 <td className='table_shortText'>{size !== undefined? size: 'Tamaño'}</td>
                 <td className='table_longText'>{name !== undefined? name: 'Nombre'}</td>
                 <td className='table_longText'>{description !== undefined? description: 'Descripcion'}</td>
-                <td className='table_longText'>{price !== undefined? price: 'Precio'}</td>
+                <td className='table_longText'>{price !== undefined? '$'+price: 'Precio'}</td>
                 <td className='table_icon'>{disponibility !== true? <XCircle/>: <CheckLg/>}</td>
                 <td className='table_icon'>{onStore !== true? <XCircle/>: <CheckLg/>}</td>
             </tr>

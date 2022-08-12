@@ -31,7 +31,6 @@ const getProductImages = async (pk_product) => {
         .catch(function (error) {
             return error.response.data
         });
-    console.log("Image response, ", response)
     return response
 }
 
@@ -63,10 +62,60 @@ const postImage = async (position, img, product_id) => {
         });
 
     return response
+}
 
+const deleteImage = async (image_id) => {
+    var config = {
+        method: 'delete',
+        url: `${baseURL}product_images/${image_id}`,
+        headers: {}
+    };
 
+    const response = await axios(config)
+        .then(function (response) {
+            return response.data
+        })
+        .catch(function (error) {
+            return error.response.data
+        });
 
+    return response
 
 }
 
-export { getImages, postImage, getProductImages}
+const putImages = async (images, product_id) => {
+    const oldImages = await getProductImages(product_id)
+    let response = {success: true}
+    console.log(images)
+    if (oldImages.success) {
+        oldImages['images'].forEach((old) => {
+            let included =  isIncluded(images, old)
+            if (old instanceof Object && !included) {
+                response = deleteImage(old.pk_image)
+            }
+        })
+    }
+
+    images.forEach((image, index) => {
+        if (image instanceof File) {
+            //console.log("NEW IMAGES FOR ADDING: ", images)
+            response = postImage(index, image, product_id)
+        }
+    })
+    console.log("PUT IMAGES: ", response)
+    return response
+
+}
+
+const isIncluded = (newImages, oldImage) => {
+    let response = false
+    newImages.forEach((image) => {
+        if (image === oldImage.url || (image.url !== undefined && image.url === oldImage.url)) {
+            response = true;
+        }
+    })
+    return response
+
+}
+
+export { getImages, postImage, getProductImages, putImages }

@@ -10,13 +10,13 @@ const ProductImageAdd = (props) => {
     const [images, setImages] = useState([])
     const [index, setIndex] = useState(0)
     const [popout, setPopOut] = useState({state:'close'})
-    const { returnImages, state, files } = props
+    const { returnImages, state, oldImg} = props
 
     useEffect(() => {
-        if (files.length > 0) {
-            imgReader(files)
+        if (oldImg !== undefined && oldImg.length > 0) {
+            imgReader(oldImg)
         }
-    }, [files])
+    }, [oldImg])
 
     useEffect(() => {
     }, [images, index])
@@ -33,8 +33,11 @@ const ProductImageAdd = (props) => {
 
     const imgReader = async (files) => {
         files.forEach((image) => {
-            setImages([...images, image.url])
+            if(!images.includes(image.url)){
+                images.push(image.url)
+            }
         })
+        setImages([...images])
 
     }
 
@@ -44,10 +47,32 @@ const ProductImageAdd = (props) => {
         return true
     }
 
+    const deleteImg = async () => {
+        images.splice(index, 1)
+        await setImages([...images])
+        if(index > 0){
+            let newIndex = index -1
+            setIndex(newIndex)
+        }
+        returnImages(images, -1, index)
+    }
+
+    const changeImg = async (e) => {
+        let file = e.target.files[0];
+        returnImages(file, index)
+        let reader = new FileReader()
+        reader.onload = function (e) {
+            images[index] =  e.target.result
+            setImages([...images])
+        }
+        reader.readAsDataURL(e.target.files[0])
+    }
+
     const renderPopOut = () => {
         if(popout.state != 'close'){
             return (
-                <OptionMenu options = {[{label: "Eliminar", icon: (<TrashFill/>)},{label: "Cambiar", icon: (<FileEarmarkArrowUp/>)}]}/>
+                <OptionMenu options = {[{input: "button", action: deleteImg, label: "Eliminar", icon: (<TrashFill/>)},{label: "Cambiar", icon: (<FileEarmarkArrowUp/>), action: changeImg, input: "file"}]}
+                />
             )
         }
 

@@ -117,6 +117,7 @@ const AdminTable = () => {
             setPopOut({state: 'closed', status:"success"})
             setTimeout(()=>{setPopOut({state:'closed', status:'finished'})}, 1500)
             setCheckedProducts([])
+            setPagination(pagination)
         }else if(button === "Cancel" ){
             setPopOut({state: 'closed'})
         }

@@ -1,5 +1,5 @@
 import { getCategories } from './categories'
-import { getImages, postImage, getProductImages} from './images'
+import { getImages, postImage, getProductImages, putImages} from './images'
 
 const baseURL = 'http://localhost:8080/'
 
@@ -78,7 +78,6 @@ const getProducts = async (page, limit, filter = '') => {
 
                 product.images = product_images
             });
-            console.log(length)
             return { products: products, length: length }
         }
 
@@ -130,7 +129,6 @@ const getProduct = async (id_product) => {
 }
 
 const putProduct = async (product, id) => {
-    console.log("Put product", product)
     var data = qs.stringify({
         'name': product.name,
         'description': product.description,
@@ -155,10 +153,13 @@ const putProduct = async (product, id) => {
             return response.data
         })
         .catch(function (error) {
-            console.log(error);
+            return error.response.data
         });
-    
-    return response;
+        console.log("IMAGES PENDING: ", product.images)
+    const imageResponse = await putImages(product.images, id)
+
+    console.log("IMAGE REWSPONSE: ", imageResponse)
+    return imageResponse;
     
 }
 

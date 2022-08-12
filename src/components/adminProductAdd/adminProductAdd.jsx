@@ -18,10 +18,9 @@ const AdminProductAdd = (props) => {
 
     useEffect(()=> {
         if(oldInfo !== undefined){
-            console.log("OldInfo images: ", oldInfo.images)
             setProduct({name: oldInfo.name, price: oldInfo.price, category: oldInfo.fk_category_product, description: oldInfo.description, images: oldInfo.images, available: oldInfo.available, inStore: oldInfo.in_store, size: oldInfo.size})
         }
-    }, [])
+    }, [oldInfo])
 
     useEffect(()=>{
 
@@ -31,8 +30,20 @@ const AdminProductAdd = (props) => {
         setProduct({...product, [name]: e.target.value})
     }
 
-    const loadImages = async (image) => {
-        await setProduct({...product, images: [...product.images, image]})
+    const loadImages = async (image, index = -2, delImg=0) => {
+        if(index >-1){
+            product.images[index] = image
+            await setProduct({...product, images: [...product.images]})
+        }else if(index === -1){
+            console.log(product.images)
+            console.log("Eliminar Imagen")
+            product['images'].splice(delImg, 1)
+            await setProduct({...product, images: [...product.images]})
+        }else{
+            console.log(product.images)
+            console.log("Imagen agregada")
+            await setProduct({...product, images: [...product.images, image]})
+        }
     }
 
 
@@ -49,9 +60,9 @@ const AdminProductAdd = (props) => {
     }
 
     const updateProduct = async () => {
-        console.log("Actualizando Producto")
         if(checkValues()){
             setLoading("loading...")
+            console.log("Update products", product)
             const response = await putProduct(product, oldInfo.pk_product)
             if(response.success){
                 setLoading("finished")
@@ -64,7 +75,6 @@ const AdminProductAdd = (props) => {
         let completed = true
 
         Object.entries(product).forEach(([key,value])=>{
-            console.log(key, value)
             if(value === '' || value.length < 0){
                 fieldsState[key] = "error"
                 completed = false
@@ -77,6 +87,7 @@ const AdminProductAdd = (props) => {
         
     }
 
+
     return (
         <div className="admin_product_add" style={state === "open"? {visibility: "visible"}: {visibility:"hidden"}}>
             {loading !== "not"? (<div className='loading_overlay' style={loading === "success"? {background: "none"}:{}}>
@@ -86,7 +97,7 @@ const AdminProductAdd = (props) => {
            ): <div/>}
             <div className='product_data'>
                 <div className='add_image'>
-                    <ProductImageAdd returnImages={loadImages} state={fieldsState.images} files={product.images}/>
+                    <ProductImageAdd oldImg = {oldInfo !== undefined? oldInfo.images: ''} returnImages={loadImages} state={fieldsState.images} files={product.images}/>
                 </div>
                 <div className='add_information'>
                     <FormTextField
