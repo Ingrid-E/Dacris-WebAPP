@@ -35,13 +35,19 @@ const Login = () => {
         <h2>Iniciar Sesión</h2>
         <form className="verificar" onSubmit={(e) => validate(e)}>
           <div className="form-group">
-            <label for="exampleInputEmail1">Usuario</label>
+
+            <div className="login_textfield">
+            <h1>Usuario</h1>
             <input type="email" className="form-control" onChange={(e) => handleChange(e, "email")} aria-describedby="emailHelp" />
+            </div>
+
           </div>
 
           <div className="form-group">
-            <label for="exampleInputPassword1">Contraseña</label>
+            <div className="login_textfield">
+            <h1>Contraseña</h1>
             <input type="password" className="form-control" onChange={(e) => handleChange(e, "password")} />
+            </div>
           </div>
           
           <Button text="Iniciar sesion" type="submit"/>
