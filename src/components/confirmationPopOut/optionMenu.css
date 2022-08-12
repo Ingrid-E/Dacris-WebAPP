@@ -1,0 +1,40 @@
+.option_menu  {
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid #DFDFDF;
+    border-radius: 4px;
+}
+.option_menu .menu_option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 1rem;
+    gap: 10px;
+    margin: 0;
+
+}
+
+.option_menu .menu_option:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+
+.option_menu .menu_option h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: none;
+    font-size: 20px;
+    margin: 0;
+}
+
+.option_menu .menu_option svg{
+    font-size: 20px;
+    color: black;
+}
+
+.option_menu input  {
+    display: none;
+}

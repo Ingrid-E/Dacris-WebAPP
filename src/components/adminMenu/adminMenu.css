@@ -1,24 +1,18 @@
-
+.admin_menu {
+    height: fit-content ;
+}
 
 .admin_menu *  {
     text-shadow: none;
     color: black;
 }
 
-.admin_menu .title {
-    font-family: 'League Gothic', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    text-shadow: none;
-}
-
 .admin_menu .menu {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
     background-color: #90D8FF;
     width: 200px;
+    height:100vh;
     padding: 1rem 1.5rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;

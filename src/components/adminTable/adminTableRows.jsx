@@ -26,6 +26,24 @@ const AdminTableRow = (props) => {
             onClick(id, false)
         }
     }
+    
+
+    const changeNumber = (price) => {
+        var counter = 0;
+        var priceChar = Math.trunc(price).toString();
+        var finalPrice = "";
+    
+    
+        for(var i=priceChar.length-1;i>=0;i--){
+            counter++;
+            if(counter%3==0 && i!=0) finalPrice += priceChar[i]+".";
+            else finalPrice += priceChar[i]
+        }
+    
+        const showPrice = finalPrice.split("").reverse().join("");
+        return showPrice;
+    
+    }
 
 
     return (
@@ -36,7 +54,7 @@ const AdminTableRow = (props) => {
                 <td className='table_shortText'>{size !== undefined? size: 'Tamaño'}</td>
                 <td className='table_longText'>{name !== undefined? name: 'Nombre'}</td>
                 <td className='table_longText'>{description !== undefined? description: 'Descripcion'}</td>
-                <td className='table_longText'>{price !== undefined? price: 'Precio'}</td>
+                <td className='table_longText'>{price !== undefined? '$'+changeNumber(price): 'Precio'}</td>
                 <td className='table_icon'>{disponibility !== true? <XCircle/>: <CheckLg/>}</td>
                 <td className='table_icon'>{onStore !== true? <XCircle/>: <CheckLg/>}</td>
             </tr>

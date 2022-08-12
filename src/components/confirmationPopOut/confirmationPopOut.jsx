@@ -14,11 +14,11 @@ const ConfirmationPopOut = (props) => {
             <div className='popout_buttons'>
                 <button
                 style={{backgroundColor: "#6C757D"}}
-                onClick={()=>{}}>Cancelar</button>
+                onClick={()=>clickAction("Cancel")}>Cancelar</button>
 
                 <button
                 style={{backgroundColor: "#007BFF"}}
-                onClick={()=> clickAction()}
+                onClick={()=> clickAction("Delete")}
                 >
                 {confirmation}
                 </button>
