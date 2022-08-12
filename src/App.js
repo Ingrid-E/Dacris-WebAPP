@@ -1,21 +1,28 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import {Home, AboutUs, Login, Catalogue, Categories, CatalogueProducts } from "./pages/index"
-import { Navbar, SocialMedia } from './components';
+import {Home, Login} from "./pages/index"
+//import { navbar, socialMedia} from './components';
+//import ButtonsNext from "./components/buttonNext/ButtonsNext";
+import AboutUs from "./pages/aboutus/about-us";
+import FrecuentQuestions from "./pages/frequent-questions/frequent-questions";
+import Sales from "./pages/sales-points/sales"
 import './app.css'
 
 
 function App() {
   return (
     <div className="App">
-      {/*<Router>
+      {
+        <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/aboutus' element={<AboutUs/>}/>
+          <Route path='/nosotros' element={<AboutUs/>}/>
+          <Route path='/preguntas-frecuentes' element={<FrecuentQuestions/>}/>
+          <Route path='/puntos-ventas' element={<Sales/>}/>
           <Route path='/login' element={<Login/>}/>
         </Routes>
-      </Router>*/}
-      <Home />
+      </Router>
+      }
       </div>
 
   );
