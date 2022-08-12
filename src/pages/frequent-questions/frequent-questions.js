@@ -5,7 +5,6 @@ import NavBar from "../../components/NavBar"
 import Footer from "../../components/footer/Footer"
 import Aos from "aos"
 import image from "../../assets/a.png"
-
 import "aos/dist/aos.css"
 
 function FrequentQuestions() {
@@ -17,7 +16,7 @@ function FrequentQuestions() {
     const accordionData = [
         {
             id: 1,
-            title: '¿Los productos cuentan con garantía?',
+            title: '¿Garantía de un producto?',
             content: `Los productos cuentan con XX días de garantía. 
             La garantía esta ligada a las siguientes condiciones de fallas en el producto, es decir, recibe el producto equivocado.
             material descompuesto y fallas en las costuras.
@@ -38,7 +37,7 @@ function FrequentQuestions() {
         },
         {
             id: 4,
-            title: '¿En que material estan hechos los productos?',
+            title: 'Material de los productos',
             content: `Nuestros productos están hechos con materiales biodegradables `
         }
     ];

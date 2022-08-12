@@ -37,8 +37,8 @@ function Sales() {
                 <div className="container_info">
                     <img className="image" data-aos="fade-up" src={norte} alt="Sede Norte"></img>
                     <div className="info_text">
-                        <p>Ohlala Sede Sur</p>
-                        <p>Pasoancho Cra 64a</p>
+                        <p>Ohlala Sede Norte</p>
+                        <p>Avenida sexta con 28</p>
                         <p>Cali, Colombia</p>
                     </div>
                     <iframe title="My Daily Marathon Tracker" data-aos="fade-up" className="round" src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5052303170937!2d-76.53023035038811!3d3.4695878520560672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6165d01b173%3A0xded38f58005e3a5e!2sAv.%206%20Nte.%20%2328%20Norte%2024%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses-419!2sco!4v1660250613954!5m2!1ses-419!2sco"}
