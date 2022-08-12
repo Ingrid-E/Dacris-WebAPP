@@ -2,8 +2,11 @@
     width: 100%;
     height: 70px;
     position: fixed;
+    top: 0;
+    left: 0;
     background: #FFFFFF;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .dacris__navbar-links {
@@ -13,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .dacris__navbar-links_logo {
@@ -21,6 +25,12 @@
 
 .dacris__navbar-links_logo img {
     height: 100%;
+}
+
+.dacris__navbar-links_items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dacris__navbar-links_items {
@@ -50,6 +60,7 @@
 
 .dacris__navbar-links_items_list_item a:hover {
     color: var(--color-text-hover);
+    text-decoration: none;
 }
 
 .bxs-down-arrow {
@@ -59,10 +70,6 @@
 
 .bxs-down-arrow:hover {
     color: var(--color-text-hover);
-}
-
-.dacris__navbar-links_items_list_item img {
-    height: 35px;
 }
 
 .dacris__navbar-menu {
@@ -76,3 +83,145 @@
     align-items: flex-end;
     flex-direction: column;
 }
+
+.dacris__navbar-links-buttons {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    position: relative;
+    z-index: 1001;
+}
+
+.dacris__navbar-links-buttons a {
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+.dacris__navbar-links-buttons a img{
+    height: 100%;
+}
+
+.dacris__navbar-links-burguer-button {
+    width: 0;
+    height: 0;
+    background: var(--primary-color);
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dacris__navbar-links-burguer-button-line {
+    width: 75%;
+    height: 10%;
+    background: #000000;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s all ease-in-out;
+}
+
+.dacris__navbar-links-burguer-button-line::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    border-radius: 5px;
+    position: absolute;
+    transform: translateY(-250%);
+    transition: .3s all ease-in-out;
+}
+
+.dacris__navbar-links-burguer-button-line::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    border-radius: 5px;
+    position: absolute;
+    transform: translateY(250%);
+    transition: .3s all ease-in-out;
+}
+
+.dacris__navbar-links-burguer-button-line.open {
+    background: none;
+}
+
+.dacris__navbar-links-burguer-button-line.open::before {  
+    transform: translateY(0%) rotate(45deg);
+}
+
+.dacris__navbar-links-burguer-button-line.open::after {
+    transform: translateY(0%) rotate(-45deg);
+}
+
+@media screen and (max-width: 500px) {
+    .dacris__navbar {
+        height: 40px;
+    }
+
+    .dacris__navbar-links {
+        padding: 0px 10px;
+    }
+
+    .dacris__navbar-links_logo {
+        width: 45px;
+        z-index: 1001;
+    }
+
+    .dacris__navbar-links_items {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        background: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s all ease-in-out;
+        z-index: 1000;
+    }
+
+    .dacris__navbar-links_items.show {
+        top: 0;
+    }
+    
+    .dacris__navbar-links_items_list {
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    
+    .dacris__navbar-links_items_list_item {
+        float: left;
+        padding: 10px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5px;
+    }
+
+    .dacris__navbar-links_items_list_item a {
+        font-size: 40px;
+    }
+
+    .dacris__navbar-links-burguer-button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .dacris__navbar-links-buttons {
+        column-gap: 10px;
+    }
+
+    .dacris__navbar-links-buttons a {
+        width: 20px;
+        height: 20px;
+        position: relative;
+    }
+  }

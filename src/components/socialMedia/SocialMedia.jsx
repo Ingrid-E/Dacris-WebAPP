@@ -6,11 +6,11 @@ import whatsappIcon from './../../assets/whatsapp-logo.png'
 
 const SocialMedia = () => {
   return (
-    <div className="dacris__social-media">
-      <ul className="dacris__social-media-list">
-        <li className="dacris__social-media-list-item"><a href=""><img src={instagramIcon} alt="instagram-icon.png" /></a></li>
-        <li className="dacris__social-media-list-item"><a href=""><img src={facebookIcon} alt="facebook-icon.png" /></a></li>
-        <li className="dacris__social-media-list-item"><a href=""><img src={whatsappIcon} alt="instagram-icon.png" /></a></li>
+    <div className='dacris__social-media'>
+      <ul className='dacris__social-media-list'>
+        <li className="dacris__social-media-list-item"><a href=""><img src={instagramIcon} alt="instagram-icon" /></a></li>
+        <li className="dacris__social-media-list-item"><a href=""><img src={facebookIcon} alt="facebook-icon" /></a></li>
+        <li className="dacris__social-media-list-item"><a href=""><img src={whatsappIcon} alt="whatsapp-icon" /></a></li>
       </ul>
     </div>
   )

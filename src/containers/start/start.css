@@ -1,0 +1,139 @@
+.dacris__start {
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dacris__start-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.dacris__start-banner-content {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dacris__start-banner-content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    row-gap: 40px;
+}
+
+.dacris__start-banner-content-box-title {
+    font-family: 'playlist script';
+    font-size: 105px;
+    text-shadow: 5px 5px rgba(255, 255, 255, 1);
+}
+
+.dacris__start-banner-content-box-text {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    padding: 0px 100px;
+    margin-bottom: 20px;
+}
+
+.dacris__start-banner-content-box-buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+}
+
+.dacris__start-banner-image {
+    width: 45%;
+    height: 100%;
+    animation: home-image-animation 16s ease infinite;
+}
+
+@keyframes home-image-animation {
+    0%{
+        background-size: cover;
+        background-position: center;
+        background-image: url(./../../assets/home-background1.png);
+    }
+    15% {}
+    25%{
+        background-size: cover;
+        background-position: center;
+        background-image: url(./../../assets/home-background2.png);
+    }
+    40%{}
+    50%{
+        background-size: cover;
+        background-position: center;
+        background-image: url(./../../assets/home-background3.png);
+    }
+    65%{}
+    75% {
+        background-size: cover;
+        background-position: center;
+        background-image: url(./../../assets/home-background4.png);
+    }
+    90%{}
+    100%{
+        background-size: cover;
+        background-position: center;
+        background-image: url(./../../assets/home-background1.png);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dacris__start-banner-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        overflow: visible;
+    }
+    
+    .dacris__start-banner-content-box {
+        position: absolute;
+        width: 700px;
+        height: fit-content;
+        padding: 10px 0;
+        row-gap: 10px;
+        background: rgba(0, 0, 0, .5);
+        transform: translateX(5px) rotateZ(-45deg);
+    }
+    
+    .dacris__start-banner-content-box-title {
+        font-size: 50px;
+        color: #FFFFFF;
+        text-shadow: none;
+        text-align: center;
+    }
+    
+    .dacris__start-banner-content-box-text {
+        font-size: 22px;
+        padding: 0px;
+        color: #FFFFFF;
+        margin-bottom: 0;
+    }
+    
+    .dacris__start-banner-content-box-buttons {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .dacris__start-banner-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+}

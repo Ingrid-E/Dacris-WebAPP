@@ -1,11 +1,11 @@
 .dacris__menu {
     width: 100%;
     height: auto;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
+    background: #fff;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.dacris__menu-content {
+.dacris__menu-content{
     display: flex;
     column-gap: 100px;
     justify-content: center;

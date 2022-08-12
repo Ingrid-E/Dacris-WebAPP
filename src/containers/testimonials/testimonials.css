@@ -1,0 +1,42 @@
+.dacris__testimonials {
+    width: 100%;
+    height: fit-content;
+    background: #FFFFFF;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    row-gap: 25px;
+    overflow: hidden;
+}
+
+.dacris__testimonials-title {
+    color: #000000;
+    font-size: 125px;
+    font-family: 'Playlist Script';
+}
+
+.dacris__testimonials-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+}
+
+@media screen and (max-width: 500px) { 
+    .dacris__testimonials {
+        padding: 25px 0px;
+    }
+
+    .dacris__testimonials-title {
+        font-size: 50px;
+    }
+
+    .dacris__testimonials-container {
+        flex-flow: column;
+        row-gap: 50px;
+    }
+}

@@ -1,0 +1,36 @@
+.dacris__aboutUs {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    column-gap: 5vh;
+    padding-top: 70px;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.dacris__aboutUs-container-buttons{
+    width: 90rem;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.dacris__dotButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    background: var(--color-text-hover);
+    border: none;
+    transition: .3s;
+}
+
+@media screen and (max-width: 500px) {
+    .dacris__aboutUs-container-buttons{
+        column-gap: 25px;
+    }
+}
