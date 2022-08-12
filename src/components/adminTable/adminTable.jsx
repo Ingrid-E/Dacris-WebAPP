@@ -14,15 +14,39 @@ const AdminTable = () => {
     const [pagination, setPagination] = useState({page: 1, limit: 5, length: 0, filter: ''})
     const [checkedProducts, setCheckedProducts] = useState([])
     const [popout, setPopOut] = useState({state:'close'})
+    const [screenSize, getDimension] = useState({
+        dynamicWidth: window.innerWidth,
+        dynamicHeight: window.innerHeight
+    })
 
     useEffect(() => {
-    }, [checkedProducts])
+    }, [checkedProducts, pagination])
 
     useEffect(() => {
+        window.matchMedia('(max-height: 768px)').addEventListener('change', event => setDimension(event))
+        setDimension()
         call();
         //eslint-disable-next-line
     }, [])
 
+    const setDimension = (event = null) => {
+        console.log(window.innerWidth);
+        if(event === null){
+            let max768 = window.matchMedia('(max-height: 768px)').matches
+            if(max768){
+                pagination.limit = 4
+            }else{
+                pagination.limit = 5
+            }
+        }else{
+            if (event.matches) {
+              pagination.limit = 4
+            } else {
+                pagination.limit = 5
+            }
+        }
+        call()
+    }
 
     const call = async () => {
         const callProducts = await getProducts(pagination.page, pagination.limit, pagination.filter)
@@ -142,8 +166,6 @@ const AdminTable = () => {
         <div className="admin_table">
             {renderPopOut()}
             {popout.status === "success"? <CheckMark/>:<div></div>}
-
-            <h1>Product Table</h1>
             <div className='admin_table_options'>
                 <RoundTextField
                     action={(e) => handleKeyPress(e)}
@@ -161,7 +183,6 @@ const AdminTable = () => {
                 </div>
 
             </div>
-            <br></br>
             <table>
                 <thead>
                     <tr className='admin_table_row admin_table_header'>

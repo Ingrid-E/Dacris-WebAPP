@@ -67,3 +67,33 @@
     font-family: 'Montserrat';
     resize: none;
 }
+
+@media screen and (max-width: 1536px) {
+    .round_textfield input {
+        width: 16rem;
+        height: 1.5rem;
+        font-size: 1rem;
+        padding-left: 30px;
+    }
+    .round_textfield svg {
+        position: relative;
+        top: 0px;
+        left: 25px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1537px) and (max-width: 1600px) {
+    .round_textfield input {
+        width: 16rem;
+        height: 1.8rem;
+        font-size: 1.1rem;
+        padding-left: 30px;
+    }
+    .round_textfield svg {
+        position: relative;
+        top: -2px;
+        left: 25px;
+        font-size: 1.2rem;
+    }
+}

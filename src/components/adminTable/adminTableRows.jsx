@@ -14,7 +14,6 @@ const AdminTableRow = (props) => {
             }
         }
         isChecked()
-        currencyFormat(price)
         //eslint-disable-next-line
     }, [])
 
@@ -27,18 +26,23 @@ const AdminTableRow = (props) => {
             onClick(id, false)
         }
     }
+    
 
-    const currencyFormat = (money)=> {
-        let currency = money.toString();
-        console.log("CURRENCY: ", currency)
-        //console.log(currency.substring(0,3))
-        //console.log(currency.substring(3, currency.length))
-        let start = currency.length-3
-        for(let i = start-3; i>0; i-=3){
-            currency=currency.substring(0, i)+'.'+currency.substring(i, start)
-            i++
+    const changeNumber = (price) => {
+        var counter = 0;
+        var priceChar = Math.trunc(price).toString();
+        var finalPrice = "";
+    
+    
+        for(var i=priceChar.length-1;i>=0;i--){
+            counter++;
+            if(counter%3==0 && i!=0) finalPrice += priceChar[i]+".";
+            else finalPrice += priceChar[i]
         }
-        console.log("NEW CURRENCY: ", currency)
+    
+        const showPrice = finalPrice.split("").reverse().join("");
+        return showPrice;
+    
     }
 
 
@@ -50,7 +54,7 @@ const AdminTableRow = (props) => {
                 <td className='table_shortText'>{size !== undefined? size: 'Tamaño'}</td>
                 <td className='table_longText'>{name !== undefined? name: 'Nombre'}</td>
                 <td className='table_longText'>{description !== undefined? description: 'Descripcion'}</td>
-                <td className='table_longText'>{price !== undefined? '$'+price: 'Precio'}</td>
+                <td className='table_longText'>{price !== undefined? '$'+changeNumber(price): 'Precio'}</td>
                 <td className='table_icon'>{disponibility !== true? <XCircle/>: <CheckLg/>}</td>
                 <td className='table_icon'>{onStore !== true? <XCircle/>: <CheckLg/>}</td>
             </tr>
