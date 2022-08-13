@@ -19,8 +19,8 @@ const Navbar = () => {
         <div className='dacris__navbar-links_items-container'>
         <div className={`dacris__navbar-links_items ${toggleMenuResponsive ? "show" : ""}`}>
           <ul className="dacris__navbar-links_items_list">
-            <li className='dacris__navbar-links_items_list_item'><a href="">inicio</a></li>
-            <li className='dacris__navbar-links_items_list_item'><a href="">nosotros</a></li>
+            <li className='dacris__navbar-links_items_list_item'><a href="/">inicio</a></li>
+            <li className='dacris__navbar-links_items_list_item'><a href="/nosotros">nosotros</a></li>
             <li className='dacris__navbar-links_items_list_item'><a href="">catalogo</a>
               <i>
               {toggleMenu
@@ -29,7 +29,7 @@ const Navbar = () => {
               }
               </i>
             </li>
-            <li className='dacris__navbar-links_items_list_item'><a href="">puntos de venta</a></li>
+            <li className='dacris__navbar-links_items_list_item'><a href="/puntos-ventas">puntos de venta</a></li>
             <li className='dacris__navbar-links_items_list_item'><a href="">promociones</a></li>
           </ul>
         </div>

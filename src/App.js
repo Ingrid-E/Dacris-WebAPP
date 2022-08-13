@@ -1,8 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Home, Login} from "./pages/index"
-//import { navbar, socialMedia} from './components';
-//import ButtonsNext from "./components/buttonNext/ButtonsNext";
 import AboutUs from "./pages/aboutus/about-us";
 import FrecuentQuestions from "./pages/frequent-questions/frequent-questions";
 import Sales from "./pages/sales-points/sales"

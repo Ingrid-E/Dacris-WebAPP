@@ -6,7 +6,7 @@ import photoC from "../../assets/photoC.png"
 import wp from "../../assets/wpSVG.svg"
 import insta from "../../assets/instaSVG.svg"
 import fb from "../../assets/fbSVG.png"
-import NavBar from "../../components/NavBar"
+import { Navbar } from '../../components/index';
 import Footer from "../../components/footer/Footer"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -18,7 +18,7 @@ function AboutUs() {
 
     return (
         <div className="aboutus" >
-            <NavBar />
+            <Navbar />
             <div className="title">
                 Sobre nosotros
             </div>

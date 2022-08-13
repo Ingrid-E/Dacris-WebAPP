@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import '../sales-points/sales.css'
-import NavBar from "../../components/NavBar"
+import { Navbar} from '../../components/index';
 import Footer from "../../components/footer/Footer"
 import Aos from "aos"
 import sur from "../../assets/sur.png"
@@ -17,7 +17,7 @@ function Sales() {
 
     return (
         <div className="sales" >
-            <NavBar />
+            <Navbar />
             <div className="title"> <img src={location} alt="location">
             </img> ¿Donde estamos ubicados?! <img src={location} alt="location">
                 </img></div>

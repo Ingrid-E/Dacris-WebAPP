@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import { Start, AboutUs, NewProducts, Catalogs, Testimonials, InstagramNews } from '../../containers/index';
 import { Navbar, SocialMedia } from '../../components/index';
-import { Footer } from '../../components'
+import Footer from "../../components/footer/Footer"
 
 function Home() {
     return (
@@ -18,7 +18,7 @@ function Home() {
             <NewProducts title='Lo Nuevo' />
             <Testimonials />
             <InstagramNews />
-            <Footer />
+            <Footer/>
         </div>
 
     )
