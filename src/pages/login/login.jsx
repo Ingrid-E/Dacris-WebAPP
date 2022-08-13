@@ -40,7 +40,7 @@ const Login = () => {
 
             <div className="login_textfield">
             <h1>Usuario</h1>
-            <PersonFill/>
+            <PersonFill className="user_icon"/>
             <input type="email" className="form-control" onChange={(e) => handleChange(e, "email")} aria-describedby="emailHelp" />
             </div>
 
@@ -49,7 +49,7 @@ const Login = () => {
           <div className="form-group">
             <div className="login_textfield">
             <h1>Contraseña</h1>
-            <div onClick={()=> setHide(!hide)}>
+            <div onClick={()=> setHide(!hide)} className="password_icon">
               {hide? <EyeFill/>:<EyeSlashFill/>}
             </div>
             <input type={hide?"password":"text"} className="form-control" onChange={(e) => handleChange(e, "password")} >

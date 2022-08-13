@@ -38,3 +38,9 @@
 .option_menu input  {
     display: none;
 }
+
+@media screen and (max-width: 1536px) {
+    .option_menu .menu_option h1, .option_menu .menu_option svg{
+        font-size: 1rem;
+    }
+}

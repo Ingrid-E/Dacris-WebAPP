@@ -14,7 +14,7 @@ function AdminPage() {
                     <AdminMenu current={section}/>
                     <div className="section_container">
                         <div>
-                            <h1>Productos</h1>
+                            <h1 className="section_title">Productos</h1>
                             <AdminTable />
                         </div>
                     </div>

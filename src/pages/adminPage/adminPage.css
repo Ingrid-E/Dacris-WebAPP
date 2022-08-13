@@ -22,7 +22,7 @@
     margin: 1.5rem 1rem;
 }
 
-.admin_page .section_container h1 {
+.admin_page .section_container .section_title {
     align-self: flex-start;
     font-family: 'League Gothic';
     font-style: normal;

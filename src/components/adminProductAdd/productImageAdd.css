@@ -87,3 +87,19 @@
     border: none;
 }
 
+@media screen and (max-width: 1536px) {
+    .product_add_images .images_placeholder {
+        width: 17rem;
+        height: 29rem;
+        margin-bottom: 20px;
+    }
+    .product_add_images .product_images svg {
+        font-size: 1.5rem;
+    }
+    .admin_imageButton label {
+        font-size: 1.4rem;
+    }
+    .admin_product_add .admin_button button {
+        font-size: 1.4rem;
+    }
+}
