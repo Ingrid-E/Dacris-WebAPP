@@ -4,7 +4,7 @@ import "./login.css";
 import logo from "../../assets/Marca de Agua.png";
 import loginSubmit from "../../api/login";
 import Button from "../../components/adminButtons/button";
-
+import { PersonFill, EyeFill, EyeSlashFill} from "react-bootstrap-icons";
 
 const Login = () => {
 
@@ -14,6 +14,8 @@ const Login = () => {
     email: "",
     password: ""
   })
+
+  const [hide, setHide] = useState(true)
 
   const validate = async (e) => {
     e.preventDefault();
@@ -38,6 +40,7 @@ const Login = () => {
 
             <div className="login_textfield">
             <h1>Usuario</h1>
+            <PersonFill/>
             <input type="email" className="form-control" onChange={(e) => handleChange(e, "email")} aria-describedby="emailHelp" />
             </div>
 
@@ -46,7 +49,11 @@ const Login = () => {
           <div className="form-group">
             <div className="login_textfield">
             <h1>Contraseña</h1>
-            <input type="password" className="form-control" onChange={(e) => handleChange(e, "password")} />
+            <div onClick={()=> setHide(!hide)}>
+              {hide? <EyeFill/>:<EyeSlashFill/>}
+            </div>
+            <input type={hide?"password":"text"} className="form-control" onChange={(e) => handleChange(e, "password")} >
+            </input>
             </div>
           </div>
           

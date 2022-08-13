@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 @import url('http://fonts.cdnfonts.com/css/playlist');
 
+
+
 .login * {
     font-family: 'League Gothic', sans-serif;
 }
@@ -9,6 +11,7 @@
     display:flex;
     flex-direction: row;
     align-items: center;
+    background-color: white;
 }
 
 .login .loginRight{
@@ -30,10 +33,6 @@
     width: 140px;
 }
 
-.login .loginRight .form-group label{
-    font-size:22px;
-}
-
 .login .portada{
     background-image: url("../../assets/portada.jpg");
     height: 100vh;
@@ -50,7 +49,17 @@
 }
 
 .login .loginRight .form-group input{
-    width:20vw;
+    width:fit-content;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+.login .login_textfield {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 .login .login_textfield h1{
@@ -60,19 +69,36 @@
     font-size: 25px;
     text-shadow: none;
     letter-spacing: 0.03em;
+    color: black;
+    margin: 0;
 }
+
+.login .login_textfield svg{
+    color: black;
+    font-size: 18px;
+    height: fit-content;
+    position: relative;
+    top: 26px;
+    left: 6px;
+}
+
 
 .login .login_textfield input {
     background-color: white;
-    outline: darkgray solid 1px;
     width: 20rem;
     height: 2rem;
     border: none;
-    padding-left: 5px;
-    border-radius: 5px;
+    padding-left: 30px;
     font-size: 20px;
     font-family: 'Montserrat';
     resize: none;
+    border: 1px solid #0000008e;
+    border-radius: 5px;
+    color: black;
+}
+
+.login .form-group {
+    margin-bottom: 2rem;
 }
 
 
@@ -120,4 +146,44 @@
         font-size:18px;
     }
  
+}
+
+
+@media (min-width:544px) and (max-width:1366px){
+    .login .loginRight .logo {
+        width: 200px;
+    }
+    .login .loginRight > h2 {
+        font-size: 65px;
+    }
+    .login .loginRight .form-group input {
+        width: fit-content;
+    }
+
+}
+
+@media (min-width:1367px) and (max-width:1920px){
+    .login .loginRight .logo {
+        width: 300px;
+    }
+    .login .loginRight > h2 {
+        font-size: 80px;
+    }
+    .login .loginRight .form-group input {
+        width: 400px;
+    }
+    .login .login_textfield input {
+        height: 2.5rem;
+    }
+
+    .login .login_textfield svg{
+        color: black;
+        font-size: 22px;
+        height: fit-content;
+        position: relative;
+        top: 31px;
+        left: 6px;
+    }
+
+
 }
