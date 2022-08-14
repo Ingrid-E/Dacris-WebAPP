@@ -1,5 +1,5 @@
 import { uploadImage } from './s3_images';
-const baseURL = 'http://localhost:8080/'
+const baseURL = process.env.REACT_APP_BASEURL
 var axios = require('axios');
 var qs = require('qs');
 
@@ -45,7 +45,7 @@ const postImage = async (position, img, product_id) => {
     });
     var config = {
         method: 'post',
-        url: 'http://localhost:8080/product_images',
+        url: baseURL + "product_images",
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

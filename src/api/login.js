@@ -1,5 +1,7 @@
 var axios = require('axios');
 var qs = require('qs');
+const baseURL = process.env.REACT_APP_BASEURL
+
 
 
 const loginSubmit = async (user) => {
@@ -11,7 +13,7 @@ const loginSubmit = async (user) => {
     
     var config = {
         method: 'post',
-        url: 'http://localhost:8080/users/login',
+        url: baseURL+'users/login',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

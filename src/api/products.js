@@ -1,7 +1,7 @@
 import { getCategories } from './categories'
 import { getImages, postImage, getProductImages, putImages} from './images'
 
-const baseURL = 'http://localhost:8080/'
+const baseURL = process.env.REACT_APP_BASEURL
 
 var axios = require('axios');
 var qs = require('qs');
@@ -21,7 +21,7 @@ const postProduct = async (product) => {
 
     var config = {
         method: 'post',
-        url: 'http://localhost:8080/product',
+        url: baseURL+'product',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

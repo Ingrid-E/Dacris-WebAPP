@@ -1,9 +1,8 @@
-import api from './posts'
-const baseURL = 'http://localhost:8080/product_category'
+const baseURL = process.env.REACT_APP_BASEURL
 
 const getCategories = async () => {
     try {
-        const response  = await fetch(baseURL, {
+        const response  = await fetch(baseURL + 'product_category', {
             method: 'GET',
             redirect: 'follow'
           })
