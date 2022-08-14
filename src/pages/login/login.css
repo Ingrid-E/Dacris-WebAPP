@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('http://fonts.cdnfonts.com/css/playlist');
+
+.login{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+}
+
+.login .loginRight{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.login .loginRight > h2{
+    font-family: 'Playlist', sans-serif;
+    color: black;
+    font-size:50px;
+    margin-top:30px;
+}
+
+.login .loginRight .logo{
+    width: 140px;
+}
+
+.login .portada{
+    background-image: url("../../assets/portada.jpg");
+    height: 100vh;
+    width: 170vw;
+    background-size: cover;
+    background-position: center;
+}
+
+.login .loginRight .verificar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:30px;
+}
+
+.login .loginRight .form-group input{
+    width:fit-content;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+.login .login_textfield {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.login .login_textfield h1{
+    font-family: 'League Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-shadow: none;
+    letter-spacing: 0.03em;
+    color: black;
+    margin: 0;
+}
+
+.login .login_textfield svg{
+    color: black;
+    font-size: 18px;
+    height: fit-content;
+}
+
+.login .login_textfield .user_icon {
+    position: relative;
+    top: 25.5px;
+    left: 6px;
+}
+.login .login_textfield .password_icon {
+    position: relative;
+    top: 29px;
+    left: 6px;
+    width: fit-content;
+}
+
+
+.login .login_textfield input {
+    background-color: white;
+    width: 20rem;
+    height: 2rem;
+    border: none;
+    padding-left: 30px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    resize: none;
+    border: 1px solid #0000008e;
+    border-radius: 5px;
+    color: black;
+}
+
+.login .form-group {
+    margin-bottom: 2rem;
+}
+
+
+
+@media (min-width:544px) and (max-width:991px){
+    
+    .login .loginRight > h2{
+        font-size:40px;
+    }
+    
+    .login .loginRight .logo{
+        width: 115px;
+    }
+
+    .login .loginRight .form-group label{
+        font-size:20px;
+    }
+
+    .login .portada{
+        background-image: url("../../assets/FOTO FERIA 2.png");
+        width: 150vw;
+    }
+
+    .login .loginRight .form-group input{
+        font-size:20px;
+    }
+
+    .login .loginRight Button{
+        font-size:20px;
+    }
+}
+
+@media (min-width:280px) and (max-width:543px){
+        
+    .login .portada{
+        width:fit-content;
+    }
+
+    .login .loginRight .form-group input{
+        width: 40vw;
+        font-size: 18px;
+    }
+
+    .login .loginRight Button{
+        font-size:2rem;
+    }
+    .login .loginRight .form-group input {
+        width: 250px;
+        font-size: 1rem;
+    }
+ 
+}
+
+@media screen and (min-height: 600px) {
+    .login .login_textfield .user_icon {
+        top: 25px;
+    }
+    .login .login_textfield .password_icon {
+        top: 27px;
+    }
+}
+
+@media (min-width:544px) and (max-width:1024px){
+    .login .loginRight .logo {
+        width: 150px;
+    }
+    .login .loginRight > h2 {
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+    .login .loginRight .form-group input {
+        width: 250px;
+    }
+
+}
+
+
+@media (min-width:1025px) and (max-width:1366px){
+    .login .loginRight .logo {
+        width: 200px;
+    }
+    .login .loginRight > h2 {
+        font-size: 65px;
+    }
+    .login .loginRight .form-group input {
+        width: fit-content;
+    }
+
+}
+
+@media screen and (min-height: 720px) {
+    .login .login_textfield .user_icon {
+        top: 26px;
+    }
+    .login .login_textfield .password_icon {
+        top: 28px;
+    }
+}
+
+@media (min-width:1367px) and (max-width:1536px){
+    .login .loginRight .logo {
+        width: 200px;
+    }
+    .login .loginRight > h2 {
+        font-size: 70px;
+    }
+    .login .login_textfield h1 {
+        font-size: 1.8rem;
+    }
+    .login .loginRight .form-group input {
+        width: 300px;
+    }
+    .login .login_textfield input {
+        height: 2.5rem;
+    }
+
+    .login .login_textfield svg{
+        color: black;
+        font-size: 22px;
+        height: fit-content;
+    }
+    .login .login_textfield .user_icon {
+        top: 31px;
+    }
+    .login .login_textfield .password_icon {
+        top: 32px;
+    }
+
+    .login .loginRight .admin_button button{
+        font-size: 1.9rem;
+    }
+
+
+}
+
+@media (min-width:1537px) and (max-width:1920px){
+    .login .loginRight .logo {
+        width: 300px;
+    }
+    .login .loginRight > h2 {
+        font-size: 80px;
+    }
+    .login .login_textfield h1 {
+        font-size: 2rem;
+    }
+    .login .loginRight .form-group input {
+        width: 400px;
+    }
+    .login .login_textfield input {
+        height: 2.5rem;
+    }
+
+    .login .login_textfield svg{
+        color: black;
+        font-size: 22px;
+        height: fit-content;
+    }
+    .login .login_textfield .user_icon {
+        top: 31px;
+    }
+    .login .login_textfield .password_icon {
+        top: 32px;
+    }
+
+    .login .loginRight .admin_button button{
+        font-size: 2.5rem;
+    }
+
+
+}

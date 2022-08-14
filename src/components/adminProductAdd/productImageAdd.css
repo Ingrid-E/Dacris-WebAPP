@@ -1,0 +1,119 @@
+.product_add_images {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.product_add_images .image_options {
+    display: flex;
+}
+
+
+.product_add_images .product_images {
+    display: flex;
+    flex-direction: row;
+}
+
+.product_add_images .images_placeholder {
+    box-sizing: border-box;
+    height: 550px;
+    width: 320px;
+    background: rgb(255, 255, 255);
+    border: 2px dashed darkgray;
+    margin-bottom: 30px;
+}
+
+.product_add_images .images_placeholder .placeholder_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product_add_images .images_placeholder svg {
+    font-size: 30px;
+}
+
+.product_add_images .images_placeholder .placeholder_content h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.product_add_images .images_space {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    min-width: 320px;
+}
+
+.product_add_images .images_space img {
+    height: 550px;
+    width: auto;
+}
+
+.product_add_images .images_space .image_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.product_add_images .product_images svg {
+    font-size: 2rem;
+    color: black;
+}
+
+.product_add_images .product_images svg:hover {
+    color: #115E83;
+}
+
+.product_add_images .images_space button {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    outline: none;
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    border: none;
+}
+
+@media screen and (max-width: 1536px) {
+    .product_add_images .images_placeholder {
+        width: 15rem;
+        height: 25rem;
+        margin-bottom: 20px;
+    }
+
+    .product_add_images .images_space {
+        max-width: 15rem;
+        min-width: 15rem;
+    }
+
+    .product_add_images .images_space img {
+        width: 15rem;
+        height: 25rem;
+    }
+
+    .product_add_images .product_images svg {
+        font-size: 1.5rem;
+    }
+
+    .admin_imageButton label {
+        font-size: 1.4rem;
+    }
+
+    .admin_product_add .admin_button button {
+        font-size: 1.4rem;
+    }
+}
