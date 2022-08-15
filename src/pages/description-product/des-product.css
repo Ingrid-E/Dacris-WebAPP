@@ -1,0 +1,349 @@
+.des-p {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.des-p .title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Playlist Script';
+    font-size: 50px;
+    color: #000000;
+    text-shadow: none;
+}
+
+.des-p .des-p_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    color: black;
+    background-color: white;
+
+}
+
+.des-p .des-p_container .backs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 93vw;
+    margin-top: 10px;
+}
+
+
+.des-p .des-p_container .backs p a {
+    display: inline-block;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 22px;
+    margin-right: 5px;
+    text-shadow: none;
+    transition: .3s all;
+    text-decoration: none !important;
+    color: black;
+}
+
+
+.des-p .des-p_container .backs p a:hover {
+    color: var(--color-text-hover);
+}
+
+.des-p .des-p_container .backs .buttonB a {
+    text-decoration: none !important;
+    text-shadow: none;
+
+}
+
+
+
+.des-p .des-p_container .photos-price p {
+    font-size: 30px;
+    font-family: 'League Gothic', sans-serif;
+}
+
+.des-p_container a:hover {
+    color: var(--color-text-hover);
+}
+
+
+.des-p .des-p_container .container_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.des-p .des-p_container .container_bloque2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+
+.des-p .des-p_container .container_bloque2 input {
+    margin: 20px 0 20px 50px;
+    width: 350px;
+    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #000000;
+}
+
+.des-p .des-p_container .container_bloque2 input::-webkit-input-placeholder {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: initial;
+    color: #4b4b4be8;
+    width: 340px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+
+.des-p .des-p_container button {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #68CCEF;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.des-p .des-p_container button:hover {
+    background-color: var(--color-text-hover);
+    transform: scale(1.05);
+    transition: .50s ease-in-out;
+}
+
+.des-p .des-p_container .container_info .photos-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+
+}
+
+
+.des-p .des-p_container .container_info .photos-price .carousel.carousel-slider .control-arrow {
+    display: none;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .thumb.selected,
+.carousel .thumb {
+    text-align: center;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .control-dots .dot.selected {
+    background-color: #68CCEF;
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .control-dots .dot.selected:hover,
+.dot:hover {
+    background-color: #000000;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .control-dots .dot {
+    background-color: #000000;
+    width: 20px;
+    height: 20px;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .carousel-status {
+    display: none;
+}
+
+
+.des-p .des-p_container .container_info .photos-price .slide img {
+    width: 60%;
+    border-radius: 22px;
+    border: 3px solid #000000;
+}
+
+.des-p .des-p_container .container_info .photos-price .price {
+    font-size: 50px;
+    font-family: 'Playlist Script';
+    margin-top: -60px;
+}
+
+.des-p .des-p_container .container_info .data {
+    display: flex;
+    flex-direction: column;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.des-p .des-p_container .container_info .data p {
+    font-size: 35px;
+    margin-top: 0;
+
+}
+
+.des-p .des-p_container .container_info .data .reference {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+}
+
+
+.des-p .des-p_container .backs .backButton {
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: .25s ease-in-out;
+}
+
+.des-p .des-p_container .backs .buttonB {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 93vw;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.des-p .des-p_container .backs .backButton i {
+    font-size: 38px;
+    margin: 2px 5px 0 0;
+    transition: .25s ease-in-out;
+}
+
+.des-p .des-p_container .backs .backButton:hover i {
+    color: var(--color-text-hover);
+}
+
+.des-p .des-p_container .backs .backButton:hover,
+.des-p .des-p_container .backs .backButton:hover i {
+    transform: scale(1.05);
+}
+
+
+@media screen and (min-width: 767) {
+    .des-p .des-p_container .container_info .data p {
+        font-size: 30px;
+    }
+
+    .des-p .des-p_container .container_info .data .reference {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+    .des-p .des-p_container .container_info {
+        flex-direction: column;
+    }
+
+    .des-p .title {
+        margin-top: 80px;
+        text-align: center;
+        font-family: 'Playlist Script';
+        font-size: 40px;
+        color: #000000;
+        text-shadow: none;
+    }
+
+    .des-p .des-p_container .container_info .photos-price .carousel .control-dots {
+        display: none;
+    }
+
+    .des-p .des-p_container .container_info .data {
+        align-items: center;
+        letter-spacing: 0.5px;
+    }
+
+    .des-p .des-p_container .container_info .data p {
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+
+    .des-p .des-p_container .container_info .data .reference {
+        margin-bottom: 0px;
+        font-size: 18px;
+    }
+
+    .des-p .des-p_container .container_info .photos-price .slide img {
+        width: 90%;
+        border: none;
+    }
+
+    .des-p .des-p_container .container_bloque2 {
+        flex-direction: column;
+        font-size: 30px;
+    }
+
+    .des-p .des-p_container .container_bloque2 form {
+        display: block;
+        margin-right: 60px;
+        font-size: 30px;
+    }
+
+    .des-p .des-p_container .container_bloque2 input {
+        width: 250px;
+        height: 90px;
+        font-size: 17px;
+    }
+
+
+
+    .des-p .des-p_container .container_bloque2 input::-webkit-input-placeholder {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        white-space: initial;
+        font-weight: bold;
+        font-size: 15px;
+        color: #4b4b4be8;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 240px;
+    }
+
+    .des-p .des-p_container .backs .buttonB {
+        margin: 20px 0 20px 0;
+    }
+
+    .des-p .des-p_container .photos-price p {
+        font-size: 25px;
+    }
+
+    .des-p .des-p_container .backs .backButton {
+        width: 35px;
+        height: 35px;
+    }
+
+    .des-p .des-p_container .backs .backButton i {
+        font-size: 25px;
+    }
+
+    .des-p .des-p_container .container_info .photos-price .price {
+        font-size: 40px;
+        font-family: 'Playlist Script';
+        margin-top: -30px;
+    }
+
+    .des-p .des-p_container .container_info .photos-price {
+        width: 100vw;
+    }
+}

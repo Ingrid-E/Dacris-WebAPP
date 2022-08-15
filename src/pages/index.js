@@ -1,9 +1,8 @@
-import AboutUs from "./aboutus/about-us"
-import Home from "./home/home"
-import Login from "./login/login"
-import AdminPage from "./adminPage/adminPage"
-import Catalogue  from './catalogue/Catalogue';
-import Categories  from './categories/Categories';
-import CatalogueProducts  from './catalogue-products/CatalogueProducts';
-
-export {AboutUs, Home, Login, AdminPage, Catalogue, Categories, CatalogueProducts}
+export { default as Home } from './home/home';
+export { default as DescriptionProduct } from "./description-product/des-product"
+export { default as Catalogue } from './catalogue/Catalogue';
+export { default as Categories } from './categories/Categories';
+export { default as CatalogueProducts } from './catalogue-products/CatalogueProducts';
+export { default as AboutUs } from "./aboutus/about-us"
+export { default as Login } from "./login/login"
+export { default as AdminPage} from "./adminPage/adminPage"
