@@ -1,0 +1,219 @@
+.des-p * {
+    text-shadow: none;
+    color: black;
+}
+
+.des-p nav {
+    width: 100vw;
+}
+
+.des-p {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.des-p .title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Playlist Script';
+    font-size: 50px;
+    text-shadow: none;
+}
+
+.des-p .des-p_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+
+}
+
+.des-p .des-p_container .backs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 93vw;
+    margin-top: 10px;
+}
+
+.des-p .des-p_container p,
+.des-p .des-p_container a {
+    display: inline-block;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 25px;
+    text-shadow: none;
+    transition: .3s all;
+    text-decoration: none !important;
+    color: black;
+}
+
+.des-p_container a:hover {
+    color: var(--color-text-hover);
+}
+
+
+.des-p .des-p_container .container_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.des-p .des-p_container .container_bloque2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+    margin: 20px 0 40px 0;
+}
+
+.des-p .des-p_container .container_bloque2 input {
+    margin: 20px 0 20px 0;
+    width: 350px;
+    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    border: 2px solid #000000;
+}
+
+.des-p .des-p_container .container_bloque2 input::-webkit-input-placeholder {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: initial;
+    color: #4b4b4be8;
+    width: 340px;
+}
+
+
+
+.des-p .des-p_container .container_bloque2 button {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #68CCEF;
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    margin: 20px 0 20px 0;
+
+
+}
+
+.des-p .des-p_container .container_info .photos-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+
+}
+
+
+.des-p .des-p_container .container_info .photos-price .carousel.carousel-slider .control-arrow {
+    display: none;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .thumb.selected,
+.carousel .thumb {
+    text-align: center;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .control-dots .dot.selected {
+    background-color: #68CCEF;
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .control-dots .dot.selected:hover,
+.dot:hover {
+    background-color: #000000;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .control-dots .dot {
+    background-color: #000000;
+    width: 20px;
+    height: 20px;
+}
+
+.des-p .des-p_container .container_info .photos-price .carousel .carousel-status {
+    display: none;
+}
+
+.des-p .des-p_container .container_info .photos-price img {
+    width: 55%;
+    border: 3px solid #68CCEF;
+    border-radius: 18px;
+}
+
+.des-p .des-p_container .container_info .photos-price .price {
+    font-size: 60px;
+    font-family: 'Playlist Script';
+    margin-top: -50px;
+
+}
+
+.des-p .des-p_container .container_info .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.des-p .des-p_container .container_info .data p {
+    font-size: 35px;
+    margin-top: 0;
+    letter-spacing: 2px;
+
+}
+
+.des-p .des-p_container .container_info .data .reference {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+}
+
+
+.des-p .des-p_container .backs .backButton {
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: .25s ease-in-out;
+}
+
+.des-p .des-p_container .backs .buttonB {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 93vw;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.des-p .des-p_container .backs .backButton i {
+    font-size: 38px;
+    margin: 2px 5px 0 0;
+    transition: .25s ease-in-out;
+}
+
+.des-p .des-p_container .backs .backButton:hover i {
+    color: var(--color-text-hover);
+}
+
+.des-p .des-p_container .backs .backButton:hover,
+.des-p .des-p_container .backs .backButton:hover i {
+    transform: scale(1.05);
+}

@@ -72,6 +72,7 @@
     margin-top: 10px;
 }
 
+
 .sales .sales_container .round {
     border-radius: 25px;
     border: 2px solid #F6A8C3;
@@ -79,5 +80,119 @@
 
 .sales .sales_container .imageline {
     width: 70px;
+}
 
+
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+
+    .sales .title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-family: 'Playlist Script';
+        font-size: 30px;
+    }
+
+    .sales .sales_container .image {
+        width: 300px;
+    }
+
+    .sales .sales_container iframe {
+        width: 300px;
+        height: 300px;
+    }
+    .sales .sales_container {
+        flex-direction: column;
+    }
+
+    .sales .container_info .info_text {
+        gap: 2px;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .sales .sales_container .imageline {
+         width: 0px;
+    }
+    .sales .title img{
+        width: 40px;
+    }
+    
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+
+    .sales .title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-family: 'Playlist Script';
+        font-size: 30px;
+    }
+
+    .sales .sales_container .image {
+        width: 300px;
+    }
+
+    .sales .sales_container iframe {
+        width: 300px;
+        height: 300px;
+    }
+    .sales .sales_container {
+        flex-direction: column;
+    }
+
+    .sales .container_info .info_text {
+        gap: 2px;
+        width: 70%;
+        margin-bottom: 20px;
+
+    }
+    .sales .sales_container .imageline {
+         width: 0px;
+    }
+    .sales .title img{
+        width: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .sales .container_info .info_text {
+        gap: 2px;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .sales .sales_container .image {
+        width: 290px;
+    }
+
+    .sales .sales_container iframe {
+        width: 290px;
+        height: 290px;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .sales .sales_container .image {
+        width: 200px;
+    }
+    .sales .sales_container iframe {
+        width: 200px;
+        height: 200px;
+    }
+    .sales .container_info .info_text {
+        margin-bottom: 30px;
+        width: 70%;
+    }
+    .sales .container_info {
+        margin: 30px 0 30px;
+        
+    }
+
+    .sales .sales_container p {
+        font-size: 16px;
+    }
 }

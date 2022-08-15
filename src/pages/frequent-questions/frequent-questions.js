@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Accordion from "./Accordion";
 import '../frequent-questions/frequent-questions.css'
-import NavBar from "../../components/NavBar"
+import { Navbar} from '../../components/index';
 import Footer from "../../components/footer/Footer"
 import Aos from "aos"
 import image from "../../assets/a.png"
@@ -29,7 +29,7 @@ function FrequentQuestions() {
         },
         {
             id: 3,
-            title: '¿Puedo personalizar un producto?',
+            title: 'Personaliza tu producto',
             content: `Puedes personalizar el producto que desees siguiendo los siguientes pasos:
             1. XXXXX
             2. XXXXX
@@ -44,7 +44,7 @@ function FrequentQuestions() {
 
     return (
         <div className="frequent-questions" >
-            <NavBar />
+            <Navbar />
             <div className="title"> Preguntas Frecuentes </div>
             <div className="frequent-questions_container" >
                     <div className="accordion" data-aos= "fade-up">
