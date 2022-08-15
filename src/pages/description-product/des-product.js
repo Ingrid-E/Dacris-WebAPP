@@ -36,7 +36,7 @@ function DescriptionProduct({ pk_product, name, description, price,
             <Navbar />
             <div className="title">Personaliza tu producto</div>
             <div className="des-p_container">
-                <div className="backs"><p><a href="/">Inicio/</a><a href="/catalogo">Catalogo/</a><a href="/categoria">Categoria</a></p>
+                <div className="backs"><p><a className="bi-house" href="/"> Inicio/</a><a href="/catalogo">Catalogo/</a><a href="/categoria">Categoria</a></p>
                     <div className="buttonB"><div className='backButton'><i className='bx bxs-left-arrow' ></i></div><a href="catalogo">Volver al catalogo</a></div>
                 </div>
                 <div className="container_info">
@@ -69,8 +69,8 @@ function DescriptionProduct({ pk_product, name, description, price,
                 </div>
                 <div className="container_bloque2">¡Personalizame! 👜📝
                 <form><input placeholder= "Ejemplo: Me gustaría que este bolso fuera de color negro y en material cuerina" type="text" /></form>
-                <button>COMPRAR</button>
                 </div>
+                <button>COMPRAR</button>
                 </div>
                 <NewProducts title= 'También te podría interesar'/>
             <Footer />

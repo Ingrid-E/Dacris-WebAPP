@@ -1,11 +1,3 @@
-.des-p * {
-    text-shadow: none;
-    color: black;
-}
-
-.des-p nav {
-    width: 100vw;
-}
 
 .des-p {
     display: flex;
@@ -20,6 +12,7 @@
     text-align: center;
     font-family: 'Playlist Script';
     font-size: 50px;
+    color: #000000;
     text-shadow: none;
 }
 
@@ -28,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    color: black;
     background-color: white;
 
 }
@@ -40,15 +34,34 @@
     margin-top: 10px;
 }
 
-.des-p .des-p_container p,
-.des-p .des-p_container a {
+
+.des-p .des-p_container .backs p a{
     display: inline-block;
     font-family: 'League Gothic', sans-serif;
-    font-size: 25px;
+    font-size: 22px;
+    margin-right: 5px;
     text-shadow: none;
     transition: .3s all;
     text-decoration: none !important;
     color: black;
+}
+
+
+.des-p .des-p_container .backs p a:hover {
+    color: var(--color-text-hover);
+}
+
+.des-p .des-p_container .backs .buttonB a{
+    text-decoration: none !important;
+    text-shadow: none;
+
+}
+
+
+
+.des-p .des-p_container .photos-price p{
+    font-size: 30px;
+    font-family: 'League Gothic', sans-serif;
 }
 
 .des-p_container a:hover {
@@ -65,15 +78,15 @@
 
 .des-p .des-p_container .container_bloque2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     font-family: 'League Gothic', sans-serif;
     font-size: 40px;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 20px 0;
 }
 
 .des-p .des-p_container .container_bloque2 input {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 20px 50px;
     width: 350px;
     height: 150px;
     font-family: 'Montserrat', sans-serif;
@@ -94,7 +107,7 @@
 
 
 
-.des-p .des-p_container .container_bloque2 button {
+.des-p .des-p_container button {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -102,11 +115,14 @@
     background-color: #68CCEF;
     width: 150px;
     height: 50px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
-    margin: 20px 0 20px 0;
+}
 
-
+.des-p .des-p_container button:hover {
+    background-color: var(--color-text-hover);
+    transform: scale(1.05);
+    transition: .50s ease-in-out;
 }
 
 .des-p .des-p_container .container_info .photos-price {
@@ -149,28 +165,32 @@
     display: none;
 }
 
-.des-p .des-p_container .container_info .photos-price img {
-    width: 55%;
-    border: 3px solid #68CCEF;
-    border-radius: 18px;
+
+.des-p .des-p_container .container_info .photos-price .slide img {
+    width: 60%;
+    border-radius: 22px;
+    border: 3px solid #000000;
+
 }
 
 .des-p .des-p_container .container_info .photos-price .price {
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Playlist Script';
-    margin-top: -50px;
+    margin-top: -60px;
 
 }
 
 .des-p .des-p_container .container_info .data {
     display: flex;
     flex-direction: column;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 1px;
+
 }
 
 .des-p .des-p_container .container_info .data p {
     font-size: 35px;
     margin-top: 0;
-    letter-spacing: 2px;
 
 }
 
