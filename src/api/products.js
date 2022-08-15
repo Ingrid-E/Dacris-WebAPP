@@ -1,5 +1,5 @@
 import { getCategories } from './categories'
-import { getImages, postImage, getProductImages, putImages} from './images'
+import { getImages, postImage, getProductImages, putImages } from './images'
 
 const baseURL = process.env.REACT_APP_BASEURL
 
@@ -21,9 +21,10 @@ const postProduct = async (product) => {
 
     var config = {
         method: 'post',
-        url: baseURL+'product',
+        url: baseURL + 'product',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            "Access-Control-Allow-Origin": "*"
         },
         data: data
     };
@@ -45,6 +46,62 @@ const postProduct = async (product) => {
     console.log("waiting images")
     return response
 
+}
+
+const getBestSellers = async () => {
+    var config = {
+        method: 'get',
+        url: baseURL+'best_sellers',
+        headers: {}
+    };
+
+    const response = await axios(config)
+        .then(function (response) {
+            return response.data
+        })
+        .catch(function (error) {
+            return error.response.data
+        });
+
+    let bestSellers = []
+    const products = response.products
+    if (response.success) {
+        for(let product of products){
+            let element = await getProduct(product.fk_product_bestseller);
+            if(element.images !== undefined) bestSellers.push(element)
+        }
+        return { success: true, products: bestSellers};
+    } else {
+        return { success: false }
+    }
+}
+
+const getNewestProducts = async () => {
+    var config = {
+        method: 'get',
+        url: baseURL+'new_products',
+        headers: {}
+    };
+
+    const response = await axios(config)
+        .then(function (response) {
+            return response.data
+        })
+        .catch(function (error) {
+            return error.response.data
+        });
+
+    let newProducts = []
+    const products = response.products
+    if (response.success) {
+        for(let product of products){
+            let element = await getProduct(product.fk_product_new);
+            if(element.images !== undefined) newProducts.push(element)
+        }
+        return { success: true, products: newProducts};
+    } else {
+        return { success: false }
+    }
 }
 
 const getProducts = async (page, limit, filter = '') => {
@@ -121,7 +178,7 @@ const getProduct = async (id_product) => {
         .catch(function (error) {
             console.log(error);
         });
-    
+
     const getImages = await getProductImages(id_product)
     response.images = getImages.images
     return response;
@@ -140,14 +197,14 @@ const putProduct = async (product, id) => {
     });
 
     var config = {
-      method: 'put',
-      url: baseURL + `product/${id}`,
-      headers: { 
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      data : data
+        method: 'put',
+        url: baseURL + `product/${id}`,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: data
     };
-    
+
     const response = await axios(config)
         .then(function (response) {
             return response.data
@@ -155,12 +212,12 @@ const putProduct = async (product, id) => {
         .catch(function (error) {
             return error.response.data
         });
-        console.log("IMAGES PENDING: ", product.images)
+    console.log("IMAGES PENDING: ", product.images)
     const imageResponse = await putImages(product.images, id)
 
     console.log("IMAGE REWSPONSE: ", imageResponse)
     return imageResponse;
-    
+
 }
 
-export { putProduct, getProducts, deleteProducts, postProduct, getProduct}
+export { putProduct, getProducts, deleteProducts, postProduct, getProduct, getBestSellers, getNewestProducts}

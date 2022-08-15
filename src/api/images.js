@@ -16,6 +16,7 @@ const getImages = async () => {
     }
 }
 
+
 const getProductImages = async (pk_product) => {
 
     var config = {

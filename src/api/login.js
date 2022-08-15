@@ -1,6 +1,7 @@
 var axios = require('axios');
 var qs = require('qs');
 const baseURL = process.env.REACT_APP_BASEURL
+console.log("BASE URL ", baseURL)
 
 
 
@@ -15,7 +16,8 @@ const loginSubmit = async (user) => {
         method: 'post',
         url: baseURL+'users/login',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            "Access-Control-Allow-Origin": "*"
         },
         data: data
     };
