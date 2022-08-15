@@ -28,13 +28,13 @@ function DescriptionProduct({ pk_product, name, description, price,
     in_store, available, fk_category_product, size, image}) {
 
     useEffect(() => {
-        Aos.init({ duration: 3000 });
+        Aos.init({ duration: 2000 });
     }, []);
 
     return (
         <div className="des-p" >
             <Navbar />
-            <div className="title">Personaliza tu producto</div>
+            <div className="title" data-aos= "fade-down">Personaliza tu producto</div>
             <div className="des-p_container">
                 <div className="backs"><p><a className="bi-house" href="/"> Inicio/</a><a href="/catalogo">Catalogo/</a><a href="/categoria">Categoria</a></p>
                     <div className="buttonB"><div className='backButton'><i className='bx bxs-left-arrow' ></i></div><a href="catalogo">Volver al catalogo</a></div>
@@ -68,11 +68,11 @@ function DescriptionProduct({ pk_product, name, description, price,
                             </div>   
                 </div>
                 <div className="container_bloque2">¡Personalizame! 👜📝
-                <form><input placeholder= "Ejemplo: Me gustaría que este bolso fuera de color negro y en material cuerina" type="text" /></form>
+                <form><input placeholder= "Me gustaría este bolso de color negro y en cuerina" type="text" /></form>
                 </div>
                 <button>COMPRAR</button>
                 </div>
-                <NewProducts title= 'También te podría interesar'/>
+                <NewProducts title= 'Te podría interesar'/>
             <Footer />
         </div>
     )
