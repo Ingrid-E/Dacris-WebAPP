@@ -76,6 +76,8 @@ const getBestSellers = async () => {
     }
 }
 
+
+
 const getNewestProducts = async () => {
     var config = {
         method: 'get',
@@ -103,6 +105,33 @@ const getNewestProducts = async () => {
         return { success: false }
     }
 }
+
+const bestSellers_pagination = async (page, limit, filter = '') => {
+    try {
+        const response = await fetch(baseURL + `best_sellers/pagination?page=${page}&limit=${limit}&filter=${filter}`, {
+            method: "GET",
+            redirect: 'follow'
+        })
+        const json = await response.json()
+        const products = json.products
+        const length = json.length
+
+        let bestSellers = []
+        if (length > 0) {
+            for(let product of products){
+                let element = await getProduct(product.fk_product_bestseller);
+                if(element.images !== undefined) bestSellers.push(element)
+            }
+            console.log(bestSellers)
+            return { success: true, products: bestSellers};
+        } else {
+            return { success: false }
+        }
+    } catch (err) {
+        console.error("ERROR: ", err)
+    }
+}
+
 
 const getProducts = async (page, limit, filter = '') => {
     try {
@@ -220,4 +249,4 @@ const putProduct = async (product, id) => {
 
 }
 
-export { putProduct, getProducts, deleteProducts, postProduct, getProduct, getBestSellers, getNewestProducts}
+export { putProduct, getProducts, deleteProducts, postProduct, getProduct, getBestSellers, getNewestProducts, bestSellers_pagination}

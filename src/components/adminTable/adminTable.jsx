@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './adminTable.css'
 import AdminTableRow from './adminTableRows'
-import { getProducts, deleteProducts, getProduct} from '../../api/index'
+import { getProducts, deleteProducts, getProduct, bestSellers_pagination} from '../../api/index'
 import { CaretLeftFill, CaretRightFill, TrashFill, PlusLg, PencilFill} from 'react-bootstrap-icons'
 import RoundTextField from '../TextFields/roundTextField'
 import ConfirmationPopOut from '../confirmationPopOut/confirmationPopOut'
 import AdminProductAdd from '../adminProductAdd/adminProductAdd'
 import CheckMark from '../animations/checkMark'
 
-const AdminTable = () => {
+const AdminTable = (props) => {
+    const {type} = props;
     //Fetch Data
     const [products, setProducts] = useState([])
     const [pagination, setPagination] = useState({page: 1, limit: 5, length: 0, filter: ''})
@@ -49,7 +50,12 @@ const AdminTable = () => {
     }
 
     const call = async () => {
-        const callProducts = await getProducts(pagination.page, pagination.limit, pagination.filter)
+        let callProducts
+        if(type === 'products'){
+            callProducts = await getProducts(pagination.page, pagination.limit, pagination.filter)
+        }else if(type === 'bestSellers'){
+            callProducts = await bestSellers_pagination(pagination.page, pagination.limit, pagination.filter);
+        }
         setProducts( callProducts.products)
         setPagination({...pagination, length: callProducts.length.count})
     }

@@ -4,7 +4,7 @@ import { BagFill, CardImage, Tag, Folder, BoxArrowRight, ChevronDoubleLeft } fro
 import { useNavigate } from 'react-router-dom'
 
 const AdminMenu = (props) => {
-    const {current} = props
+    const {current, change} = props
     const [menuState, setMenuState] = useState(true)
     const navigate = useNavigate();
     return (
@@ -15,11 +15,11 @@ const AdminMenu = (props) => {
                     <ChevronDoubleLeft role="close or open"/>
                 </div>
                 <div className='menu_navigation'>
-                    <div className={current === "products"? 'menu_option current':'menu_option'}>
+                    <div className={current === "products"? 'menu_option current':'menu_option'} onClick={()=>change('products')}>
                         <BagFill />
                         <h1>Productos</h1>
                     </div>
-                    <div className='menu_option'>
+                    <div className={current === "images"? 'menu_option current':'menu_option'}  onClick={()=>change('images')}>
                         <CardImage />
                         <h1>Imagenes</h1>
                     </div>

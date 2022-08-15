@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import {Catalogue, CatalogueProducts, Categories, Home, Login} from "./pages/index"
+import {Catalogue, CatalogueProducts, Categories, Home, Login, AdminPage} from "./pages/index"
 import AboutUs from "./pages/aboutus/about-us";
 import FrecuentQuestions from "./pages/frequent-questions/frequent-questions";
 import Sales from "./pages/sales-points/sales"
