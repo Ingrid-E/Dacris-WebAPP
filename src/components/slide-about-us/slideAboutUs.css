@@ -31,15 +31,16 @@
     top: 0;
     left: 0;
     z-index: 1;
+    border: 10px solid #FFFFFF;
 }
 
 .dacris__slideAboutUs-images-container-small-image-container {
     position: absolute;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, .3);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border: 10px solid #FFFFFF;
 }
 
 .dacris__slideAboutUs-images-container-small-image-container:nth-child(2) {
@@ -88,7 +89,7 @@
 .dacris__slideAboutUs-data-text {
     font-size: 30px;
     font-family: 'Montserrat';
-    text-align: justify;
+    
     margin-top: 160px;
 }
 
@@ -180,8 +181,7 @@
     
     .dacris__slideAboutUs-data-title {
         font-size: 125px;
-        width: fit-content;
-        transform: translate(-40%);
+        left: -300px;
     }
     
     .dacris__slideAboutUs-data-text {
