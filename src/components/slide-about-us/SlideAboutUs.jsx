@@ -7,9 +7,9 @@ const SlideAboutUs = ({ Title, Text, Path1, Path2, Path3}) => {
     <div className='dacris__slideAboutUs'>
       <div className='dacris__slideAboutUs-images'>
         <div className='dacris__slideAboutUs-images-container'>
-          <img className='dacris__slideAboutUs-images-container-principal-image' src={Path1} alt="us.jpg"></img>
-          <div className='dacris__slideAboutUs-images-container-small-image-container'><img className='dacris__slideAboutUs-images-container-small-image-container-image' src={Path2} alt="us.jpg"></img></div>
-          <div className='dacris__slideAboutUs-images-container-small-image-container'><img className='dacris__slideAboutUs-images-container-small-image-container-image' src={Path3} alt="us.jpg"></img></div>
+          <div className='dacris__slideAboutUs-images-container-big-image-container' style={{backgroundImage: `url(${Path1})`, backgroundSize: 'cover', backgroundPosition:'center'}}></div>
+          <div className='dacris__slideAboutUs-images-container-small-image-container' style={{backgroundImage: `url(${Path2})`, backgroundSize: 'cover', backgroundPosition:'center'}}></div>
+          <div className='dacris__slideAboutUs-images-container-small-image-container' style={{backgroundImage: `url(${Path3})`, backgroundSize: 'cover', backgroundPosition:'center'}}></div>
         </div>
       </div>
       <div className='dacris__slideAboutUs-data'>

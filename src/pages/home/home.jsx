@@ -16,7 +16,7 @@ function Home() {
             <AboutUs />
             <NewProducts title='Mas Vendidos' getProducts={getBestSellers}/>
             <Catalogs />
-            <NewProducts title='Lo Nuevo' getProducts={getNewestProducts} />
+            <NewProducts title='Nuevos' getProducts={getNewestProducts} />
             <Testimonials />
             <iframe className = "insta_news" src="https://embedsocial.com/api/pro_hashtag/fc1e632d9cb157aa2bbbf5ca2a3af4644783bcfc" title="EmbedSocial widget" frameborder="0" style={{width:'80%', height:'650px', overflowY:'auto', display: 'block', margin: '0 auto'}}></iframe>
             <Footer/>
