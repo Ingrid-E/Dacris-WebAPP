@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './adminTable.css'
 import AdminTableRow from './adminTableRows'
-import { getProducts, deleteProducts, getProduct, bestSellers_pagination} from '../../api/index'
+import { getProducts_pagination, deleteProducts, getProduct, bestSellers_pagination} from '../../api/index'
 import { CaretLeftFill, CaretRightFill, TrashFill, PlusLg, PencilFill} from 'react-bootstrap-icons'
 import RoundTextField from '../TextFields/roundTextField'
 import ConfirmationPopOut from '../confirmationPopOut/confirmationPopOut'
@@ -62,7 +62,7 @@ const AdminTable = (props) => {
     const call = async () => {
         let callProducts
         if(type === 'Productos'){
-            callProducts = await getProducts(pagination.page, pagination.limit, pagination.filter)
+            callProducts = await getProducts_pagination(pagination.page, pagination.limit, pagination.filter)
         }else if(type === 'Mas Vendidos'){
             callProducts = await bestSellers_pagination(pagination.page, pagination.limit, pagination.filter);
         }

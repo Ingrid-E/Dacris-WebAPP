@@ -135,7 +135,7 @@ const bestSellers_pagination = async (page, limit, filter = '') => {
 }
 
 
-const getProducts = async (page, limit, filter = '') => {
+const getProducts_pagination = async (page, limit, filter = '') => {
     try {
         const response = await fetch(baseURL + `product/pagination?page=${page}&limit=${limit}&filter=${filter}`, {
             method: "GET",
@@ -154,6 +154,29 @@ const getProducts = async (page, limit, filter = '') => {
             }
             console.log("PRODUCT PAGINATION: ", length)
             return { products: products, length: length }
+        }
+
+    } catch (err) {
+        console.error("ERROR: ", err)
+    }
+}
+
+const getProducts = async () => {
+    try {
+        const response = await fetch(baseURL + `product`, {
+            method: "GET",
+            redirect: 'follow'
+        })
+        const products = await response.json()
+
+        if (products !== undefined && products !== []) {
+            for(let product of products){
+                const getImages = await getProductImages(product.pk_product)
+                const getCategoryInfo = await getCategory(product.fk_category_product)
+                product.images = getImages.images
+                product.category_name = getCategoryInfo.name
+            }
+            return { success: true, products: products}
         }
 
     } catch (err) {
@@ -241,4 +264,4 @@ const putProduct = async (product, id) => {
 
 }
 
-export { putProduct, getProducts, deleteProducts, postProduct, getProduct, getBestSellers, getNewestProducts, bestSellers_pagination}
+export {getProducts, putProduct, getProducts_pagination, deleteProducts, postProduct, getProduct, getBestSellers, getNewestProducts, bestSellers_pagination}

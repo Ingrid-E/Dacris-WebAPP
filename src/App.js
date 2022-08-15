@@ -24,12 +24,14 @@ function App() {
           <Route path='/categorias' element={<Categories />}/>
           <Route path='/productos' element={<CatalogueProducts />}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/admin' element={<AdminPage/>}/>
           <Route path='/des-product' element={
                       <DescriptionProduct pk_product={399} name= {'Berlin'} 
                       description = {'Mochila estilo Berlin'} price = {84000}
                             in_store = {false} available = {true} fk_category_product = {34} 
                             size = {'U'} image = {[image,image2]} //{image} image2 = {image2}
                       />}/>
+        
         </Routes>
       </Router>
       }

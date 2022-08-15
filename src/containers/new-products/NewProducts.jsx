@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import { ProductCard } from '../../components'
 import './new_products.css'
 
+
 const NewProducts = ({title, getProducts}) => {
     let [products, setProducts] = useState([])
 
