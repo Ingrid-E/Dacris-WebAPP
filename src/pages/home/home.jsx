@@ -15,7 +15,7 @@ function Home() {
             <AboutUs />
             <NewProducts title='Mas Vendidos' />
             <Catalogs />
-            <NewProducts title='Lo Nuevo' />
+            <NewProducts title='Nuevos' />
             <Testimonials />
             <InstagramNews />
             <Footer/>

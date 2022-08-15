@@ -1,6 +1,6 @@
 .dacris__productCard {
     width: fit-content;
-    height: 90%;
+    height: 85%;
     background: #FFFFFF;
     border-radius: 25px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .35);
@@ -8,8 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    row-gap: 20px;
-    padding: 15px;
+    padding: 10px;
     position: relative;
     transition: .3s;
 }
@@ -20,9 +19,11 @@
 
 .dacris__productCard-image {
     width: 200px;
-    height: 200px;
-    background: url(../../assets/aboutUs-slide2-image1.jpeg);
-    border-radius: 25px;
+    height: 400px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
 }
 
 .dacris__productCard-info {
@@ -32,12 +33,12 @@
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    row-gap: 10px;
 }
 
 .dacris__productCard-info-name {
     font-family: var(--font-family1);
-    font-size: 35px;
+    font-size: 30px;
+    margin-bottom: 0;
 }
 
 .dacris__productCard-info-price {

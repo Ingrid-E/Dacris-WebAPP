@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import {Home, Login} from "./pages/index"
+import {Catalogue, CatalogueProducts, Categories, Home, Login} from "./pages/index"
 import AboutUs from "./pages/aboutus/about-us";
 import FrecuentQuestions from "./pages/frequent-questions/frequent-questions";
 import Sales from "./pages/sales-points/sales"
@@ -17,6 +17,9 @@ function App() {
           <Route path='/nosotros' element={<AboutUs/>}/>
           <Route path='/preguntas-frecuentes' element={<FrecuentQuestions/>}/>
           <Route path='/puntos-ventas' element={<Sales/>}/>
+          <Route path='/catalogo' element={<Catalogue />}/>
+          <Route path='/categorias' element={<Categories />}/>
+          <Route path='/productos' element={<CatalogueProducts />}/>
           <Route path='/login' element={<Login/>}/>
         </Routes>
       </Router>

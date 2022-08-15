@@ -9,7 +9,7 @@ const Categories = () => {
         <div className='dacris__categories-content'>
             <HeaderTitle title='Categorias' />
             <div className='dacris__categories-content-items'>
-              <div className='dacris__categories-content-items-item'>
+              <a href='/productos' className='dacris__categories-content-items-item'>
                 <div className='dacris__categories-content-items-item-image'>
                   <div className='dacris__categories-content-items-item-image-info'>
                     <h1>Manos Libres</h1>
@@ -18,7 +18,7 @@ const Categories = () => {
                 <div className='dacris__categories-content-items-item-border'>
                   <h1>Manos Libres</h1>
                 </div>
-              </div>
+              </a>
 
               <div className='dacris__categories-content-items-item'>
                 <div className='dacris__categories-content-items-item-image'>
@@ -74,29 +74,6 @@ const Categories = () => {
                   <h1>Correas</h1>
                 </div>
               </div>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Manos Libres</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Manos Libres</h1>
-                </div>
-              </div>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Manos Libres</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Manos Libres</h1>
-                </div>
-              </div>
-              
             </div>
         </div>
         <Footer />

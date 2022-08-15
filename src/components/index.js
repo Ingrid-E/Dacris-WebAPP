@@ -8,4 +8,5 @@ export { default as SlideAboutUs } from './slide-about-us/SlideAboutUs';
 export { default as Testimonial } from './testimonial/Testimonial';
 export { default as ProductCard } from './product-card/ProductCard';
 export { default as Footer } from './Footer';
-export {default as HeaderTitle} from './header-title/HeaderTitle'
+export { default as HeaderTitle } from './header-title/HeaderTitle';
+export { default as ProductItem } from './product-item/ProductItem';

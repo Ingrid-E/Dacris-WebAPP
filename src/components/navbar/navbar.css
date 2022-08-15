@@ -40,6 +40,7 @@
 .dacris__navbar-links_items_list {
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .dacris__navbar-links_items_list_item {

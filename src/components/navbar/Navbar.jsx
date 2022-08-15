@@ -21,7 +21,7 @@ const Navbar = () => {
           <ul className="dacris__navbar-links_items_list">
             <li className='dacris__navbar-links_items_list_item'><a href="/">inicio</a></li>
             <li className='dacris__navbar-links_items_list_item'><a href="/nosotros">nosotros</a></li>
-            <li className='dacris__navbar-links_items_list_item'><a href="">catalogo</a>
+            <li className='dacris__navbar-links_items_list_item'><a href="/catalogo">catalogo</a>
               <i>
               {toggleMenu
                 ? <i className='bx bxs-down-arrow' onClick={() => setToggleMenu(false)}></i>

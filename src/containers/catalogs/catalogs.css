@@ -37,7 +37,7 @@
     justify-content: center;
     align-items: center;
     background: var(--color-background-button);
-    color: white;
+    color: white!important;
     border-radius: 15px;
     transition: .3s ease-in-out all;
     position: relative;

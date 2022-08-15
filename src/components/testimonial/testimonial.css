@@ -7,8 +7,9 @@
     align-items: center;
     flex-flow: column;
     border-radius: 25px;
-    row-gap: 15px;
+    row-gap: 5px;
     position: relative;
+    padding: 0px 10px;
     z-index: 0;
 }
 
@@ -28,11 +29,12 @@
     content: '';
     background: none;
     position: absolute;
-    width: 104%;
-    height: 105%;
+    width: 100%;
+    height: 100%;
     border-radius: 35px;
-    border: 10px solid #9CD6F4;
+    border: 6px solid #9CD6F4;
     z-index: -1;
+    transform: scaleX(1.08) scaleY(1.15);
 }
 
 .dacris__testimonial .dacris__testimonial-image {
@@ -55,6 +57,13 @@
     .dacris__testimonial {
         width: 250px;
         height: 140px;
+        row-gap: 0px;
+    }
+
+    .dacris__testimonial::before {
+        border-radius: 30px;
+        border: 4px solid #9CD6F4;
+        transform: scaleX(1.08) scaleY(1.15);
     }
     
     .dacris__testimonial h1 {

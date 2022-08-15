@@ -5,7 +5,51 @@
 
 .dacris__catalogue-products-content {
     width: 100%;
-    height: 50vh;
+    height: fit-content;
     background: #FFFFFF;
+    display: flex;
 }
 
+.dacris__catalogue-products-content-items {
+    width: 75%;
+    height: fit-content;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 25px;
+}
+
+.dacris__catalogue-products-content-filters {
+    width: 25%;
+    padding: 25px;
+}
+
+.dacris__catalogue-products-content-filters-title {
+    font-family: var(--font-family1);
+    font-size: 50px;
+}
+
+.price-filter {
+    height: fit-content;
+}
+
+.filter-title {
+    font-family: var(--font-family1);
+    font-size: 40px;
+}
+
+.filter-options {
+    height: 0px;
+    overflow: hidden;
+}
+
+.filter-options label {
+    font-family: var(--font-family-text);
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.open {
+    height: fit-content;
+}
