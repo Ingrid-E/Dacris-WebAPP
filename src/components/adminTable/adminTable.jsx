@@ -30,6 +30,16 @@ const AdminTable = (props) => {
         //eslint-disable-next-line
     }, [])
 
+
+    useEffect(() => {
+        pagination.page = 1
+        pagination.limit = 5
+        pagination.length = 0
+        pagination.filter = ''
+        call();
+
+    }, [type])
+
     const setDimension = (event = null) => {
         console.log(window.innerWidth);
         if(event === null){
@@ -51,12 +61,13 @@ const AdminTable = (props) => {
 
     const call = async () => {
         let callProducts
-        if(type === 'products'){
+        if(type === 'Productos'){
             callProducts = await getProducts(pagination.page, pagination.limit, pagination.filter)
-        }else if(type === 'bestSellers'){
+        }else if(type === 'Mas Vendidos'){
             callProducts = await bestSellers_pagination(pagination.page, pagination.limit, pagination.filter);
         }
-        setProducts( callProducts.products)
+        console.log("CALL PRODUCTS: ", callProducts.products)
+        setProducts([...callProducts.products])
         setPagination({...pagination, length: callProducts.length.count})
     }
 
@@ -171,6 +182,7 @@ const AdminTable = (props) => {
         
         <div className="admin_table">
             {renderPopOut()}
+            <h1 className='admin_table_title'>{type}</h1>
             {popout.status === "success"? <CheckMark/>:<div></div>}
             <div className='admin_table_options'>
                 <RoundTextField
@@ -217,7 +229,7 @@ const AdminTable = (props) => {
                                 key={product.pk_product}
                                 id={product.pk_product}
                                 size={product.size}
-                                image={product.images.length > 0? product.images[0].url:'#'}
+                                image={product.images !== undefined && product.images.length > 0 ? product.images[0].url:'#'}
                                 index={i}
                                 checkedProducts = {checkedProducts}
                                 onClick={handleCheckedProducts}

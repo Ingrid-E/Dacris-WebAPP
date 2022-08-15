@@ -13,4 +13,17 @@ const getCategories = async () => {
     }
 }
 
-export {getCategories}
+const getCategory = async (category_id) => {
+    try {
+        const response  = await fetch(baseURL + 'product_category/'+category_id, {
+            method: 'GET',
+            redirect: 'follow'
+          })
+          const json = await response.json()
+          return json
+    }catch(err){
+        console.error(err)
+    }
+}
+
+export {getCategories, getCategory}

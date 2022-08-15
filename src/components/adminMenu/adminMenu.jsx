@@ -15,19 +15,19 @@ const AdminMenu = (props) => {
                     <ChevronDoubleLeft role="close or open"/>
                 </div>
                 <div className='menu_navigation'>
-                    <div className={current === "products"? 'menu_option current':'menu_option'} onClick={()=>change('products')}>
+                    <div className={current === "Productos"? 'menu_option current':'menu_option'} onClick={()=>change('Productos')}>
                         <BagFill />
                         <h1>Productos</h1>
                     </div>
-                    <div className={current === "images"? 'menu_option current':'menu_option'}  onClick={()=>change('images')}>
+                    <div className={current === "Mas Vendidos"? 'menu_option current':'menu_option'} onClick={()=>change('Mas Vendidos')}>
                         <CardImage />
-                        <h1>Imagenes</h1>
+                        <h1>MasVendidos</h1>
                     </div>
-                    <div className='menu_option'>
+                    <div className='menu_option' style={{visibility: 'hidden'}}>
                         <Tag />
                         <h1>Descuentos</h1>
                     </div>
-                    <div className='menu_option'>
+                    <div className='menu_option' style={{visibility: 'hidden'}}>
                         <Folder />
                         <h1>Catalogo</h1>
                     </div>

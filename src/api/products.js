@@ -1,4 +1,4 @@
-import { getCategories } from './categories'
+import { getCategories, getCategory} from './categories'
 import { getImages, postImage, getProductImages, putImages } from './images'
 
 const baseURL = process.env.REACT_APP_BASEURL
@@ -115,15 +115,17 @@ const bestSellers_pagination = async (page, limit, filter = '') => {
         const json = await response.json()
         const products = json.products
         const length = json.length
-
+        console.log("RESPONSE, ",  response)
+        console.log("PRODUCTS, ",  products)
+        console.log("LRNGTH, ",  length)
         let bestSellers = []
-        if (length > 0) {
+        if (length.count > 0) {
             for(let product of products){
                 let element = await getProduct(product.fk_product_bestseller);
                 if(element.images !== undefined) bestSellers.push(element)
             }
-            console.log(bestSellers)
-            return { success: true, products: bestSellers};
+            console.log("BEST SELLER: ", bestSellers, "LENGTH: ", length)
+            return { success: true, products: bestSellers, length: length};
         } else {
             return { success: false }
         }
@@ -144,26 +146,13 @@ const getProducts = async (page, limit, filter = '') => {
         const length = json.length
 
         if (products !== undefined && products !== []) {
-            const categories = await getCategories()
-            const images = await getImages()
-            products.forEach(product => {
-                let product_images = []
-                categories.find(category => {
-                    if (category.pk_category === product.fk_category_product) {
-                        product.category_name = category.name
-                        return true
-                    }
-                    return false
-                })
-
-                images.forEach(image => {
-                    if (image.fk_product_images === product.pk_product) {
-                        product_images.push(image)
-                    }
-                })
-
-                product.images = product_images
-            });
+            for(let product of products){
+                const getImages = await getProductImages(product.pk_product)
+                const getCategoryInfo = await getCategory(product.fk_category_product)
+                product.images = getImages.images
+                product.category_name = getCategoryInfo.name
+            }
+            console.log("PRODUCT PAGINATION: ", length)
             return { products: products, length: length }
         }
 
@@ -209,7 +198,10 @@ const getProduct = async (id_product) => {
         });
 
     const getImages = await getProductImages(id_product)
+    const getCategoryInfo = await getCategory(response.fk_category_product)
     response.images = getImages.images
+    response.category_name = getCategoryInfo.name
+
     return response;
 
 }

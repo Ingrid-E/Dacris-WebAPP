@@ -21,14 +21,3 @@
     width: -webkit-fill-available;
     margin: 1.5rem 1rem;
 }
-
-.admin_page .section_container .section_title {
-    align-self: flex-start;
-    font-family: 'League Gothic';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0.03em;
-}
-

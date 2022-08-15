@@ -5,7 +5,7 @@ import { useLocation} from "react-router-dom";
 
 function AdminPage() {
     const { email } = useLocation().state;
-    const [section, setSection] = useState("products")
+    const [section, setSection] = useState("Productos")
     const changeSection = (change) =>{
         setSection(change)
     }
@@ -17,13 +17,9 @@ function AdminPage() {
                 (<div className="verified">
                     <AdminMenu current={section} change={changeSection}/>
                     <div className="section_container">
-                        <div style={section === 'products'? {}:{display:'none'}}>
-                            <h1 className="section_title">Productos</h1>
-                            <AdminTable type="products"/>
-                        </div>
-                        <div style={section === 'images'? {}:{display:'none'}}>
-                            <h1 className="section_title">Mas Vendidos</h1>
-                            <AdminTable type="bestSellers"/>
+
+                        <div>
+                            <AdminTable type={section}/>
                         </div>
                     </div>
                 </div>)}

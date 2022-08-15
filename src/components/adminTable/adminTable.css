@@ -4,6 +4,16 @@
     width: fit-content;
 }
 
+.admin_table .admin_table_title {
+    align-self: flex-start;
+    font-family: 'League Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+}
+
 .admin_table tr {
     display: flex;
     flex-direction: row;
