@@ -16,6 +16,7 @@
     height: fit-content;
     padding: 25px 75px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 4%;
     row-gap: 30px;

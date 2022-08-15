@@ -94,8 +94,9 @@
 }
 
 .dacris__newProducts-all-button {
-    width: 70%;
+    width: fit-content;
     height: fit-content;
+    padding: 0px 50px;
     display: flex;
     justify-content: center;
     align-items: center;

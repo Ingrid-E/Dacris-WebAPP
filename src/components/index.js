@@ -13,3 +13,4 @@ export {default as AdminMenu} from './adminMenu/adminMenu';
 export {default as AdminLogin} from './adminLogin/adminLogin';
 export {default as AdminTable} from './adminTable/adminTable';
 export { default as ProductItem } from './product-item/ProductItem';
+export { default as CategorieItem} from './categorie-item/CategorieItem'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, HeaderTitle, Navbar } from '../../components'
+import { CategorieItem, Footer, HeaderTitle, Navbar } from '../../components'
 import "./categories.css"
 
 const Categories = () => {
@@ -9,71 +9,12 @@ const Categories = () => {
         <div className='dacris__categories-content'>
             <HeaderTitle title='Categorias' />
             <div className='dacris__categories-content-items'>
-              <a href='/productos' className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Manos Libres</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Manos Libres</h1>
-                </div>
-              </a>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Morrales</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Morrales</h1>
-                </div>
-              </div>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Carteras</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Carteras</h1>
-                </div>
-              </div>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Sobres de fiesta</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Sobres de fiesta</h1>
-                </div>
-              </div>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Cosmetiqueras</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Cosmetiqueras</h1>
-                </div>
-              </div>
-
-              <div className='dacris__categories-content-items-item'>
-                <div className='dacris__categories-content-items-item-image'>
-                  <div className='dacris__categories-content-items-item-image-info'>
-                    <h1>Correas</h1>
-                  </div>
-                </div>
-                <div className='dacris__categories-content-items-item-border'>
-                  <h1>Correas</h1>
-                </div>
-              </div>
+              <CategorieItem text='Manos Libres' path='https://dacrisphotobucket.s3.amazonaws.com/1638977952631-01-1660091328207.jpeg' />
+              <CategorieItem text='Morrales' path='https://dacrisphotobucket.s3.amazonaws.com/Bag-1660093746096.jpeg' />
+              <CategorieItem text='Carteras' path='https://dacrisphotobucket.s3.amazonaws.com/MiniBag-1660233757116.jpeg' />
+              <CategorieItem text='Sobres de fiesta' path='https://dacrisphotobucket.s3.amazonaws.com/1638977952631-01-1660091328207.jpeg' />
+              <CategorieItem text='Cosmetiqueras' path='https://dacrisphotobucket.s3.amazonaws.com/Bag-1660093746096.jpeg' />
+              <CategorieItem text='Correas' path='https://dacrisphotobucket.s3.amazonaws.com/MiniBag-1660233757116.jpeg' />
             </div>
         </div>
         <Footer />
