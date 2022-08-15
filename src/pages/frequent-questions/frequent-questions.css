@@ -46,7 +46,7 @@
     border-radius: 10px;
     align-items: center;
     background-color: #D6ECFA;
-    margin: 10px 40px 10px 40px;
+    margin: 10px 40px 10px 30px;
     height: 60px;
     box-shadow: 2px 2px 5px gray;
     font-family: 'League Gothic', sans-serif;
@@ -75,7 +75,7 @@
 
 .frequent-questions .frequent-questions_container .content {
     text-align: left;
-    padding-left: 32px;
+    padding-left: 40px;
     padding-bottom: 15px;
     display: block;
 }
@@ -87,7 +87,8 @@
 }
 
 .frequent-questions .frequent-questions_container .accordion-content {
-    margin-left: 50px;
+    margin-left: 35px;
+    padding-right: 40px;
     margin-top: 10px;
     font-family: 'Montserrat', sans-serif !important;
 }
@@ -100,8 +101,13 @@
 }
 
 
-
-@media screen and (min-width: 1325px) and (max-width: 1919px) {}
+@media screen and (min-width: 1325px) and (max-width: 1919px) {
+    .frequent-questions .frequent-questions_container .accordion-content {
+        margin-left: 35px;
+        margin-top: 10px;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+}
 
 
 @media screen and (min-width: 280px) and (max-width: 767px) {
@@ -127,7 +133,9 @@
     }
 
     .frequent-questions .frequent-questions_container .accordion-content {
-        margin: 10px 40px 0px 40px;
+        margin: 10px 20px 0px 40px;
+        padding-right: 10px;
+
     }
 
     .frequent-questions .frequent-questions_container .accordion-content .imageA {
@@ -141,5 +149,5 @@
     .frequent-questions .frequent-questions_container .accordion-content .imageA {
         width: 500px;
     }
-
+    
 }

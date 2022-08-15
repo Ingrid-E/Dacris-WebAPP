@@ -17,28 +17,26 @@ function FrequentQuestions() {
         {
             id: 1,
             title: '¿Garantía de un producto?',
-            content: `Los productos cuentan con XX días de garantía. 
-            La garantía esta ligada a las siguientes condiciones de fallas en el producto, es decir, recibe el producto equivocado.
-            material descompuesto y fallas en las costuras.
+            content: `Cada producto cuenta con garantía de 1️⃣ año a partir de la fecha de entrega, aplica para reparación más no cambio del mismo 👜
         `},
         {
             id: 2,
             title: '¿Donde estamos ubicados?',
-            content: `Estamos ubicados en tiendas fisicas OhLala Sur y Norte:`,
+            content: `Somos una tienda virtual📲, si te gustaría ver nuestros productos de manera física puedes dirigirte a las sedes de la tienda de maquillaje Ohlala Beauty 
+            Bar y preguntar por productos de nuestra marca, ahí siempre tenemos stock 🥂`,
             image: image
         },
         {
             id: 3,
             title: 'Personaliza tu producto',
-            content: `Puedes personalizar el producto que desees siguiendo los siguientes pasos:
-            1. XXXXX
-            2. XXXXX
-            3. XXXXX`
+            content: `Tenemos un catálogo con más de 60 referencias y todas son personalizables 😊, puedes escoger color y tipo de material de acuerdo a disponibilidad, 
+            esto no tiene ningún costo adicional 💙`
         },
         {
             id: 4,
             title: 'Material de los productos',
-            content: `Nuestros productos están hechos con materiales biodegradables `
+            content: `Trabajamos con material sintético nacional (unicolor, rayas, etc) y algunos importados (animal print, algunos otros estampados) de excelente calidad, no se 
+            pelan ni se descascaran, por eso te damos garantía de 1 año 💙 `
         }
     ];
 
