@@ -1,0 +1,159 @@
+.dacris__newProducts {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.dacris__newProducts-header {
+    width: 100%;
+    height: 30vh;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dacris__newProducts-header-container {
+    width: 98%;
+    height: calc(90% - 70px);
+    border-radius: 25px;
+    background: url(../../assets/aboutUs-slide3-image1.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .35);
+}
+
+.dacris__newProducts-header-container-title {
+    color: #FFFFFF;
+    font-size: 125px;
+    font-family: 'Playlist Script';
+}
+
+.dacris__newProducts-slider {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.dacris__newProducts-slider-container {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 2%;
+}
+
+.dacris__newProducts-slider-container-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 4%;
+    transition: .4s ease-in-out;
+}
+
+.dacris__newProducts-slider-button {
+    width: 100px;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s ease-in-out;
+}
+
+.dacris__newProducts-slider-button:hover, 
+.dacris__newProducts-slider-button:hover i {
+    transform: scale(1.1);
+}
+
+.dacris__newProducts-slider-button i {
+    font-size: 4rem;
+    transition: .25s ease-in-out;
+}
+
+.dacris__newProducts-slider-button:hover i {
+    color: var(--color-text-hover);
+}
+
+.dacris__newProducts-all {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dacris__newProducts-all-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    text-transform: capitalize;
+    font-size: 35px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .35);
+    font-family: var(--font-family1);
+    border-radius: 15px;
+    transition: .3s;
+    background: var(--color-background-button);
+    color: #FFFFFF;
+}
+
+.dacris__newProducts-all-button:hover {
+    transform: scale(1.1);
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 500px) {
+
+    .dacris__newProducts-header-container-title {
+        font-size: 55px;
+    }
+
+    .dacris__newProducts-slider-button {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .dacris__newProducts-slider-container {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0px 10px;
+    }
+    
+    .dacris__newProducts-header-container {
+        height: calc(90% - 40px);
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .dacris__newProducts-header-container {
+        height: calc(85% - 70px);
+    }
+    
+    .dacris__newProducts-header-container-title {
+        font-size: 110px;
+    }
+
+    .dacris__newProducts-slider-container {
+        width: 78%;
+        height: 100%;
+        overflow: hidden;
+        padding-left: 2%;
+    }
+}

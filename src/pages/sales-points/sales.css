@@ -1,0 +1,198 @@
+.sales * {
+    text-shadow: none;
+    color: black;
+}
+
+.sales nav {
+    width: 100vw;
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.sales .title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Playlist Script';
+    font-size: 50px;
+    text-shadow: none;
+}
+
+
+.sales .title img{
+    width: 70px;
+}
+
+.sales .sales_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+}
+
+.sales .container_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 50px 0 50px;
+}
+
+.sales .container_info .info_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.sales .container_info .info_text p{
+    text-align: center;
+} 
+
+
+.sales .sales_container p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.sales .sales_container .image {
+    width: 350px;
+    padding-bottom: 40px;
+    margin-top: 10px;
+}
+
+
+.sales .sales_container .round {
+    border-radius: 25px;
+    border: 2px solid #F6A8C3;
+}
+
+.sales .sales_container .imageline {
+    width: 70px;
+}
+
+
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+
+    .sales .title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-family: 'Playlist Script';
+        font-size: 30px;
+    }
+
+    .sales .sales_container .image {
+        width: 300px;
+    }
+
+    .sales .sales_container iframe {
+        width: 300px;
+        height: 300px;
+    }
+    .sales .sales_container {
+        flex-direction: column;
+    }
+
+    .sales .container_info .info_text {
+        gap: 2px;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .sales .sales_container .imageline {
+         width: 0px;
+    }
+    .sales .title img{
+        width: 40px;
+    }
+    
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+
+    .sales .title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-family: 'Playlist Script';
+        font-size: 30px;
+    }
+
+    .sales .sales_container .image {
+        width: 300px;
+    }
+
+    .sales .sales_container iframe {
+        width: 300px;
+        height: 300px;
+    }
+    .sales .sales_container {
+        flex-direction: column;
+    }
+
+    .sales .container_info .info_text {
+        gap: 2px;
+        width: 70%;
+        margin-bottom: 20px;
+
+    }
+    .sales .sales_container .imageline {
+         width: 0px;
+    }
+    .sales .title img{
+        width: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .sales .container_info .info_text {
+        gap: 2px;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .sales .sales_container .image {
+        width: 290px;
+    }
+
+    .sales .sales_container iframe {
+        width: 290px;
+        height: 290px;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .sales .sales_container .image {
+        width: 200px;
+    }
+    .sales .sales_container iframe {
+        width: 200px;
+        height: 200px;
+    }
+    .sales .container_info .info_text {
+        margin-bottom: 30px;
+        width: 70%;
+    }
+    .sales .container_info {
+        margin: 30px 0 30px;
+        
+    }
+
+    .sales .sales_container p {
+        font-size: 16px;
+    }
+}

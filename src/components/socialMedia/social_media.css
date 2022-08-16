@@ -1,0 +1,41 @@
+.dacris__social-media {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    overflow: visible;
+    z-index: 999;
+}
+
+.dacris__social-media-list-item {
+    padding: 10px 0px;
+}
+
+.dacris__social-media-list-item a img {
+    height: 50px;
+    transition: .3s all;
+}
+
+.dacris__social-media-list-item a img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 500px) {
+    .dacris__social-media {
+        bottom: 2%;
+        right: 2%;
+        opacity: 0;
+    }
+    
+    .dacris__social-media-list-item {
+        padding: 6px 0px;
+    }
+    
+    .dacris__social-media-list-item a img {
+        height: 35px;
+        transition: .3s all;
+    }
+    
+    .dacris__social-media-list-item a img:hover {
+        transform: scale(1.2);
+    }
+}

@@ -1,0 +1,54 @@
+.dacris__instagramNews {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 50px 0px;
+    row-gap: 25px;
+    overflow: hidden;
+}
+
+.dacris__instagramNews-title {
+    color: #000000;
+    font-size: 125px;
+    font-family: 'Playlist Script';
+}
+
+.dacris__instagramNews-container {
+    width: 100%;
+    height: fit-content;
+    background: #FFFFFF;
+    padding: 50px 0px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .25);
+    overflow: hidden;
+}
+
+.dacris__instagramNews-container-news {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    column-gap: 50px;
+    padding: 0px 0px 0px 25px;
+    transition: 1s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+    .dacris__instagramNews {
+        padding: 20px 0px;
+    }
+    
+    .dacris__instagramNews-title {
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .dacris__instagramNews-container {
+        
+    }
+    
+    .dacris__instagramNews-container-news {
+        
+    }
+}

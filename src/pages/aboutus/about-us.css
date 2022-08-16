@@ -1,0 +1,274 @@
+.aboutus * {
+        text-shadow: none;
+        color: black;
+}
+.aboutus nav{
+        width: 100vw;
+}
+
+.aboutus {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: hidden;
+}
+
+.aboutus .title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Playlist Script';
+        font-size: 50px;
+        text-shadow: none;
+}
+
+.aboutus .aboutus_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        background-color: white;
+        padding: 50px 0;
+}
+
+.aboutus .container_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        margin: 30px 0;
+}
+
+.aboutus .container_info:nth-child(2){
+        flex-direction: row-reverse;
+}
+
+
+.aboutus .container_info .info_text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 40%;
+}
+
+.aboutus .container_info .info_text h1{
+        font-family: 'League Gothic', sans-serif;
+        font-size: 40px;
+        text-shadow: none;
+        color: black;
+}
+
+.aboutus .container_info .info_text p{
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+}
+
+.aboutus .container_info .info_text cite{
+        font-family: Georgia, Times, Times New Roman, serif;
+        font-style: italic;
+        color: #6F6F6F;
+        font-size: 20px;
+}
+
+.aboutus .container_info .info_image{
+        display: inline-block;
+        width: 500px;
+}
+
+.aboutus .aboutus_contactanos  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+}
+
+.aboutus .aboutus_contactanos h1 {
+        font-family: 'League Gothic', sans-serif;
+        font-size: 40px;
+        text-shadow: none;
+        align-self: flex-start;
+        margin-left: 20px;
+        color: black;
+}
+
+.aboutus .aboutus_contactanos a:hover{
+        text-decoration: none;
+}
+
+.aboutus .aboutus_contactanos  .contactanos_redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+        margin-bottom: 30px;
+
+}
+
+.aboutus .contactanos_redes .red {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        gap: 10px;
+}
+
+
+.aboutus .contactanos_redes .red  p{
+        margin: 10px 10px;
+        text-align: center;
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+}
+
+
+@media screen and (min-width: 1280px){
+        .aboutus .container_info .info_image{
+                width: 450px;
+        }
+        
+        .aboutus .container_info .info_image img{
+                width: 450px;
+        }
+        .aboutus .container_info .info_text h1{
+                font-size: 40px;
+        }
+        
+        .aboutus .container_info .info_text p{
+                font-size: 18px;
+        }
+        
+        .aboutus .container_info .info_text cite{
+                font-size: 16px;
+        }
+}
+
+
+
+@media screen and (min-width: 1325px) and (max-width: 1919px){
+        .aboutus .container_info {
+                flex-direction: row !important;
+        }
+        .aboutus .title {
+                font-size: 60px;
+        }
+        .aboutus .container_info .info_image{
+                width: 500px;
+        }
+        
+        .aboutus .container_info .info_image img{
+                width: 500px;
+        }
+        .aboutus .container_info:nth-child(2){
+                flex-direction: row-reverse !important;
+        }
+        .aboutus .aboutus_contactanos  .contactanos_redes{
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-around;
+                gap: 50px;
+        }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 1324px){
+        .aboutus .title {
+                font-size: 70px;
+        }
+        .aboutus .container_info {
+                width: 70%;
+
+        }
+        .aboutus .container_info .info_image{
+                width: 500px;
+        }
+        
+        .aboutus .container_info .info_image img{
+                width: 500px;
+        }
+        .aboutus .container_info .info_text h1{
+                font-size: 50px;
+        }
+        
+        .aboutus .container_info .info_text p{
+                font-size: 20px;
+        }
+        
+        .aboutus .container_info .info_text cite{
+                font-size: 22px;
+        }
+        .aboutus .contactanos_redes .red  p{
+                font-size: 1.5rem;
+        }
+        .aboutus .contactanos_redes .red  a{
+                font-size: 1.5rem;
+        }
+        .aboutus .aboutus_contactanos h1 {
+                font-size: 50px;
+
+        }
+        
+}
+
+@media screen and (min-width: 280px) and (max-width: 767px){
+        .aboutus .container_info {
+                flex-direction: column;
+        }
+        .aboutus .container_info .info_text {
+                width: 90%;
+                margin-bottom: 30px;
+        }
+        
+        .aboutus .container_info .info_image{
+                width: 300px;
+        }
+
+
+        .aboutus .container_info .info_image img{
+                width: 300px;
+        }
+
+        .aboutus .container_info:nth-child(2){
+                flex-direction: column;
+        }
+        .aboutus .aboutus_contactanos  .contactanos_redes{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 50px;
+
+        }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+        .aboutus .container_info {
+                flex-direction: column;
+        }
+        .aboutus .container_info .info_text {
+                width: 90%;
+                margin-bottom: 30px;
+        }
+        
+        .aboutus .container_info .info_image{
+                width: 400px;
+        }
+
+        .aboutus .container_info .info_image img{
+                width: 400px;
+        }
+
+        .aboutus .container_info:nth-child(2){
+                flex-direction: column;
+        }
+        .aboutus .aboutus_contactanos  .contactanos_redes{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 50px;
+
+        }
+}
+
+

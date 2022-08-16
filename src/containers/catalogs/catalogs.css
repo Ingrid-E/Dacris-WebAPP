@@ -1,0 +1,75 @@
+.dacris__catalogs {
+    width: 100%;
+    height: fit-content;
+    background: #FFFFFF;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    row-gap: 50px;
+    overflow: hidden;
+}
+
+.dacris__catalogs-title {
+    color: #000000;
+    font-size: 125px;
+    font-family: 'Playlist Script';
+}
+
+.dacris__catalogs-buttons {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    position: relative;
+}
+
+ .dacris__catalogs-buttons-button {
+    width: 40%;
+    height: 100px;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 90px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-background-button);
+    color: white!important;
+    border-radius: 15px;
+    transition: .3s ease-in-out all;
+    position: relative;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .3);
+    text-decoration: none;
+}
+
+.dacris__catalogs-buttons-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+}
+
+@media screen and (max-width: 500px) {
+    .dacris__catalogs {
+        padding: 5px;
+        height: fit-content;
+        row-gap: 10px;
+    }
+
+    .dacris__catalogs-title {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .dacris__catalogs-buttons {
+        column-gap: 15px;
+    }
+
+    .dacris__catalogs-buttons-button {
+        width: 50%;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+}

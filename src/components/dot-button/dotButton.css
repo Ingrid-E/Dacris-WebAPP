@@ -1,0 +1,12 @@
+.dacris__dotButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    background: var(--color-text-hover);
+    border: none;
+    transition: .3s;
+}
+
+.dacris__dotButton:hover {
+    transform: scale(1.3);
+}
