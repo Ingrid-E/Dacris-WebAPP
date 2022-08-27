@@ -10,6 +10,7 @@
     flex-flow: column;
     padding: 10px;
     position: relative;
+    margin: 0px 15px;
     transition: .3s;
 }
 

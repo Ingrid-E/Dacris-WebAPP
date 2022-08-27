@@ -24,3 +24,25 @@
     font-size: 1000%;
     color: #FFFFFF;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+    .dacris__header-title {
+        height: 150px;
+    }
+    
+    .dacris__header-title-content {
+        width: 95%;
+        height: 90%;
+        border: 5px solid #FFFFFF;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .dacris__header-title-content-text {
+        font-family: var(--font-family-title);
+        font-size: 500%;
+        color: #FFFFFF;
+    }
+}

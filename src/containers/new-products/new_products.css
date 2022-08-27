@@ -47,15 +47,12 @@
     width: 70%;
     height: 100%;
     overflow: hidden;
-    padding-left: 2%;
 }
 
 .dacris__newProducts-slider-container-slide {
-    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    column-gap: 4%;
     transition: .4s ease-in-out;
 }
 
@@ -116,31 +113,36 @@
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+    
+    .dacris__newProducts {
+        width: 100%;
+        height: 85vh;
+    }
+
+    .dacris__newProducts-header {
+        height: 15vh;
+    }
+
+    .dacris__newProducts-header-container {
+        width: 98%;
+        height: calc(80%);
+        border-radius: 20px;
+        margin-top: 0;
+    }
 
     .dacris__newProducts-header-container-title {
-        font-size: 55px;
+        font-size: 60px;
     }
 
-    .dacris__newProducts-slider-button {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .dacris__newProducts-slider-container {
-        justify-content: flex-start;
-        width: 100%;
-        padding: 0px 10px;
-    }
-    
-    .dacris__newProducts-header-container {
-        height: calc(90% - 40px);
-        margin-top: 40px;
+    .dacris__newProducts-all-button {
+        padding: 0px 25px;
+        font-size: 30px;
+        color: #FFFFFF;
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 500px) and (max-width: 1400px) {
 
     .dacris__newProducts-header-container {
         height: calc(85% - 70px);
@@ -154,6 +156,6 @@
         width: 78%;
         height: 100%;
         overflow: hidden;
-        padding-left: 2%;
+        
     }
 }

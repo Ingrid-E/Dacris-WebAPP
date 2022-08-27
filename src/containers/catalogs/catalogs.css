@@ -50,9 +50,9 @@
     box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 0px) and (max-width: 500px) {
     .dacris__catalogs {
-        padding: 5px;
+        padding: 15px 5px;
         height: fit-content;
         row-gap: 10px;
     }
@@ -64,12 +64,18 @@
 
     .dacris__catalogs-buttons {
         column-gap: 15px;
+        flex-flow: column;
+        row-gap: 10px;
     }
 
     .dacris__catalogs-buttons-button {
-        width: 50%;
+        width: 90%;
         height: 50px;
         font-size: 30px;
         border-radius: 10px;
     }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1400px) {
+
 }

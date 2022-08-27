@@ -59,16 +59,6 @@
     z-index: 2;
 }
 
-.dacris__slideAboutUs-images-container-principal-image {
-    width: 100%;
-    position: absolute;
-}
-
-.dacris__slideAboutUs-images-container-small-image-container-image {
-    width: 100%;
-    position: absolute;
-}
-
 .dacris__slideAboutUs-data {
     width: 40%;
     height: 100%;
@@ -89,7 +79,6 @@
 .dacris__slideAboutUs-data-text {
     font-size: 30px;
     font-family: 'Montserrat';
-    
     margin-top: 160px;
 }
 
@@ -102,11 +91,10 @@
     column-gap: 50px;
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (min-width: 0px) and (max-width: 500px) {
     .dacris__slideAboutUs {
         flex-flow: column;
         width: 100%;
-        row-gap: 10px;
     }
     
     .dacris__slideAboutUs-images {
@@ -115,13 +103,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        background: #157486;
     }
     
     .dacris__slideAboutUs-images-container{
         width: 100%;
         height: 100%;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+        transform: translateY(0);
+    }
+
+    .dacris__slideAboutUs-images-container-big-image-container {
+        width: 100%;
+        height: 100%;
+        border: none;
     }
     
     .dacris__slideAboutUs-images-container-small-image-container {
@@ -133,21 +128,32 @@
     }
     
     .dacris__slideAboutUs-data {
-        width: 90%;
+        width: 100%;
         height: 50%;
         padding: 0px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
     }
     
     .dacris__slideAboutUs-data-title {
+        width: fit-content;
+        left: 0;
         font-size: 50px;
+        position: relative;
+        margin-top: 15px;
     }
     
     .dacris__slideAboutUs-data-text {
         font-size: 15px;
+        margin-top: 15px;
+        text-align: justify;
+        padding: 0px 25px;
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media only screen and (min-width: 500px) and (max-width: 1400px) {
     .dacris__slideAboutUs {
         column-gap: 10px;
     }

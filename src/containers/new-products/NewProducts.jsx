@@ -40,6 +40,7 @@ const NewProducts = ({title, getProducts}) => {
     const [width, setWidth] = useState();
     const [height, setHeigth] = useState();
     const [moves, setMoves] = useState(0);
+    const win = window.innerWidth;
 
     const nextMove = () => {
         setMoves(moves + 1);

@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../button/Button'
 import './product_card.css'
 
 const ProductCard = ({ path, productName, productPrice }) => {
