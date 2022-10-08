@@ -34,8 +34,6 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-docs/Release
 
 # Dependency directories
 node_modules/
@@ -112,8 +110,6 @@ dist
 # testing
 /coverage
 
-# production
-/docs
 
 # misc
 .DS_Store
